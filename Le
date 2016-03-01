@@ -2206,7 +2206,7 @@ if msg:lower():sub(1,3) == "oa " then
 local plrz = GetPlr(plr, msg:lower():sub(4))
 for i, v in pairs(plrz) do
 coroutine.resume(coroutine.create(function()
-if v and not ChkOwner(v.Name) then table.insert(owners, v.Name) coroutine.resume(coroutine.create(function() repeat wait() until v and v.Character and v:findFirstChild("PlayerGui") Message("Kohltastrophe", "You're an admin!", false, {v}) end)) end
+if v and not ChkOwner(v.Name) then table.insert(owners, v.Name) coroutine.resume(coroutine.create(function() repeat wait() until v and v.Character and v:findFirstChild("PlayerGui") Message("Domino Orb", "You're an admin!", false, {v}) end)) end
 end))
 end
 end
