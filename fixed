@@ -1,0 +1,14 @@
+name = "hiphiphortsnort"
+player = game.Workspace["hiphiphortsnort"]
+m = Instance.new("Model") m.Parent = player m.Name = "" .. name .. "'s Orb"
+p = Instance.new("Part") p.Parent = player["" .. name .. "'s Orb"] p.Size = Vector3.new(1,1,1) p.Position = Vector3.new(0,20,0) p.Name = "Head"
+mesh = Instance.new("SpecialMesh",p)
+mesh.MeshType = "FileMesh"
+mesh.MeshId = rbxassetid://"1031410"
+mesh.TextureId = rbxassetid://"1031417"
+h = Instance.new("Humanoid") h.Parent = player["" .. name .. "'s Orb"] h.MaxHealth = 0 h.Health = 0
+b = Instance.new("BodyPosition") b.Parent = player["" .. name .. "'s Orb"].Head b.maxForce = Vector3.new(10000000,10000000,10000000)
+while true do
+b.position = player.Head.Position + Vector3.new(0,3,5)
+wait()
+end
