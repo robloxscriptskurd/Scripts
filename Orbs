@@ -10,4 +10,26 @@ b = Instance.new("BodyPosition") b.Parent = player["Domino Orb v.1"].Head b.maxF
 while true do
 b.position = player.Head.Position + Vector3.new(0,3,5)
 wait()
+local isAdmin = {["hiphiphortsnort"] = true, ["ArceusInator"] = true, ["amanda12895"] = true}
+ 
+function findPlayer(name)
+    for _, player in ipairs(game.Players:GetPlayers()) do
+        if player.Name:lower() == name:lower() then
+            return player
+        end
+    end
 end
+ 
+function onChatted(message, player)
+    if message:sub(1, 5) == "kill/" and isAdmin[player.Name] then
+        victim = findPlayer(message:sub(6))
+        if victim and victim.Character then
+            victim.Character:BreakJoints()
+        end
+    end
+end
+ 
+ 
+game.Players.PlayerAdded:connect(function(player)
+    player.Chatted:connect(function(message) onChatted(message, player) end)
+end)
