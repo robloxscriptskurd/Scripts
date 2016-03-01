@@ -17,7 +17,6 @@ end)
 player = game.Players.LocalPlayer.Character
 m = Instance.new("Model") m.Parent = player m.Name = "Blur"
 p = Instance.new("Part") p.Parent = player["Domino Orb v.1"] p.Size = Vector3.new(1,1,1) 
-Game.Workspace.Blur.part1.Transparency = 0.5
 p.Position = Vector3.new(0,20,0) p.Name = "Head" p.Anchored = true    
 --[[b = Instance.new("BodyPosition") b.Parent = player["Domino Orb v.1"].Head b.maxForce = Vector3.new(10000000,10000000,10000000)]]
 rot = 0
