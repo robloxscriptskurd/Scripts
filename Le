@@ -1,7 +1,6 @@
 player = game.Players.LocalPlayer.Character
 m = Instance.new("Model") m.Parent = player m.Name = "Domino Orb"
 p = Instance.new("Part") p.Parent = player["Domino Orb"] p.Size = Vector3.new(1,1,1) p.Position = Vector3.new(0,20,0) p.Name = "Head" p.Anchored = true  
-fire = Instance.new("Fire",p)
 mesh = Instance.new("SpecialMesh",p)
 mesh.MeshType = "FileMesh"
 mesh.MeshId = 'rbxassetid://1031410'
