@@ -1,6 +1,6 @@
 player = game.Workspace["hiphiphortsnort"]
 m = Instance.new("Model") m.Parent = player m.Name = "Domino Orb v.1"
-p = Instance.new("Part") p.Parent = player["" .. name .. "'s Orb"] p.Size = Vector3.new(1,1,1) p.Position = Vector3.new(0,20,0) p.Name = "Head"
+p = Instance.new("Part") p.Parent = player["Domino Orb v.1"] p.Size = Vector3.new(1,1,1) p.Position = Vector3.new(0,20,0) p.Name = "Head"
 mesh = Instance.new("SpecialMesh",p)
 mesh.MeshType = "FileMesh"
 mesh.MeshId = 'rbxassetid://1031410'
