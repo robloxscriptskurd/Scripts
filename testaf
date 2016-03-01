@@ -1,0 +1,20 @@
+siz = 5
+for num=1,5 do
+if trail==nil then
+local trail = Instance.new("Part",game.Workspace)
+trail.BrickColor=BrickColor.new("New Yeller")
+trail.Anchored = true
+trail.FormFactor="Custom"
+trail.Size = Vector3.new(.4,.4,siz+2)
+trail.CFrame = player.Character.Torso.CFrame
+else
+local p= Instance.new("Part",game.Workspace)
+p.BrickColor=BrickColor.new("New Yeller")
+p.Anchored = true
+p.FormFactor="Custom"
+p.Size = Vector3.new(.4,.4,siz+2)
+p.CFrame =CFrame.new( (trail.CFrame*CFrame.new(0,0,trail.Size.Z/2)).p,(player.Character.Torso.Position*Vector3.new(1,trail.Position.Y,1)))
+trail=p
+end
+wait(1)
+end
