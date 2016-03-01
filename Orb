@@ -5,7 +5,6 @@ p = Instance.new("Part") p.Parent = player["" .. name .. "'s Orb"] p.Size = Vect
 mesh = Instance.new("SpecialMesh",p)
 mesh.MeshType = "FileMesh"
 mesh.MeshId = 1031410
-mesh.TextureId = 1031417
 h = Instance.new("Humanoid") h.Parent = player["" .. name .. "'s Orb"] h.MaxHealth = 0 h.Health = 0
 b = Instance.new("BodyPosition") b.Parent = player["" .. name .. "'s Orb"].Head b.maxForce = Vector3.new(10000000,10000000,10000000)
 while true do
