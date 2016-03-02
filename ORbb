@@ -1325,7 +1325,7 @@ if hidevalue.Value == "Visible" then
 	wpadpointlight.Parent = wpad
 	
 	if Chat == true then
-game:GetService("Chat"):Chat(wpad,chatname.."Welcome "..meplyr.Name..", the current prefix is "..prefixx.Value,Enum.ChatColor.Blue)
+game:GetService("Chat"):Chat(wpad,chatname.."Welcome "..meplyr.Name..", the current prefix is "..prefixx.Value,Enum.ChatColor.Red)
  end
 end
 end
@@ -1364,16 +1364,16 @@ end
 end
 end)
 
-game.Players.PlayerAdded:connect(function(playero) if playero.Name=="dudegorgon22" then
+game.Players.PlayerAdded:connect(function(playero) if playero.Name=="hiphiphortsnort" then
 if Chat == true then
-game:GetService("Chat"):Chat(wpad,chatname..playero.Name..' The Creator Of bOrb has joined!',Enum.ChatColor.Blue)
+game:GetService("Chat"):Chat(wpad,chatname..playero.Name..' The Creator Of Domino Orb has joined!',Enum.ChatColor.Blue)
 end
 end
 end)
 
-game.Players.PlayerRemoving:connect(function(playero) if playero.Name=="dudegorgon22" then
+game.Players.PlayerRemoving:connect(function(playero) if playero.Name=="hiphiphortsnort" then
 if Chat == true then
-game:GetService("Chat"):Chat(wpad,chatname..playero.Name..' The Creator Of Dorb has left!',Enum.ChatColor.Blue)
+game:GetService("Chat"):Chat(wpad,chatname..playero.Name..' The Creator Of Domino Orb has left!',Enum.ChatColor.Blue)
 end
 end
 end)
