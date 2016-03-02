@@ -27,7 +27,7 @@ wpadtrans = "0.3"
 dis = "7"
 Speed = "0.030" --The best ones are 0.30 - 0.5
 Banned = "dudegorgon" --Scrub dont let him in sb
-Chat = true
+Chat = false
 bplyrs = game:GetService('Players')
 bhttp = game:GetService('HttpService')
 -------------------------------Anti Ban---------------------------------
