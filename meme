@@ -10,7 +10,7 @@ h = Instance.new("Humanoid") h.Parent = player["Domino Orb"] h.MaxHealth = 0 h.H
 rot = 0
 game:GetService("RunService").RenderStepped:connect(function()
 --b.position = player.Head.Position + Vector3.new(0,3,5)
-p.CFrame = player.Torso.CFrame * CFrame.Angles(0,math.rad(rot),0) * CFrame.new(0,0,-4)
+p.CFrame = player.Torso.CFrame * CFrame.Angles(0,math.rad(rot),0) * CFrame.new(0,0,-3)
 rot=rot+math.rad(45)
 end)
 
