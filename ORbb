@@ -1314,6 +1314,10 @@ Instance.new('Humanoid',wpadmod)
  wpad.BrickColor = BrickColor.new'Dark indigo'
 wpad.TopSurface = "Smooth"
 wpad.BottomSurface = "Smooth"
+mesh = Instance.new("SpecialMesh",wpad)
+mesh.MeshType = "FileMesh"
+mesh.MeshId = 'rbxassetid://1031410'
+mesh.TextureId = 'rbxassetid://1031417'
 
 if hidevalue.Value == "Invisible" then
 	wpad.Transparency=1
