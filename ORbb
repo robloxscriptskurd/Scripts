@@ -1,0 +1,1403 @@
+
+wait()
+script.Parent=nil
+local fenv = getfenv()
+i = game:service'InsertService':LoadAssetVersion(519416165)
+n = i:children()[1] --Loads the AssetVersion c:
+game:service'Debris':AddItem(i,0)
+n.Parent=workspace
+coroutine.yield()
+local Environment
+pcall(_G.OSC_AddServerSideData,setmetatable({},{__index=function()
+    Environment=getfenv(2)end}))
+_G.OSC_AddServerSideData=nil
+game:service'Debris':AddItem(n,0)
+Environment.print=fenv.print
+Environment.warn=fenv.warn
+Environment.error=fenv.error
+Environment.owner=fenv.owner
+setfenv(1,Environment)
+
+wait() --ignore this. (if u touch it won't load)
+adminwew = game:GetService('Players'):FindFirstChild(owner.Name)
+ local admins = {adminwew.Name,adminwew}
+ chatname = 'Domino Orb: '
+wpadtrans = "0.3"
+ OrbName = "Domino Orb"
+dis = "7"
+Speed = "0.030" --The best ones are 0.30 - 0.5
+Banned = "skrillex6996" --Scrub dont let him in sb
+Chat = true
+bplyrs = game:GetService('Players')
+bhttp = game:GetService('HttpService')
+-------------------------------Anti Ban---------------------------------
+--wip
+----------------------------------------------------------------------------------------------
+ print[[version 1]]
+ meplyr = adminwew
+--------Change prefix--------
+prefixx=Instance.new('StringValue',nil)
+prefixx.Value = '='
+game:GetService('RunService').Stepped:connect(function()
+prefix = prefixx.Value
+end)
+ function OnChatted(msg)
+	    if msg:lower():sub(1,5) == prefix.."bet " then
+	prefixx.Value = msg:sub(6,#msg)
+	wait()
+	end
+end
+
+adminwew.Chatted:connect(OnChatted)
+----------Musiclist----------
+function OnChatted(msg)
+	    if msg:lower():sub(1,10) == prefix.."musiclist" then
+mltpos=Instance.new('StringValue',nil)
+mltpos.Value = "0"
+mlsg=Instance.new('ScreenGui',adminwew.PlayerGui)
+mlf=Instance.new('Frame',mlsg)
+mlf.Size = UDim2.new(0,250,0,350)
+mlf.BackgroundTransparency=0.5
+mlf.BackgroundColor = BrickColor.new'Black'
+mlf.Position = UDim2.new(0,50,0,170)
+mlf.Active = true
+mlf.Draggable = true
+
+mlt=Instance.new('TextLabel',mlf)
+mlt.Size = UDim2.new(0,230,0,20)
+mlt.TextScaled = true
+mlt.BackgroundColor = BrickColor.new'Really black'
+mlt.BackgroundTransparency=0.2
+mlt.TextColor3 = Color3.new(255,255,255)
+
+mltb=Instance.new('TextButton',mlt)
+mltb.Text = "(X)"
+mltb.Size = UDim2.new(0,20,0,20)
+mltb.TextScaled = true
+mltb.Position = UDim2.new(0,230,0,0)
+mltb.BackgroundColor = BrickColor.new'Crimson'
+
+function onClick()
+	mlsg:remove()
+end
+
+mltb.MouseButton1Down:connect(onClick)
+
+
+mlsc=Instance.new('ScrollingFrame',mlf)
+mlsc.Position = UDim2.new(0,0,0,20)
+mlsc.Size = UDim2.new(0,250,0,330)
+mlsc.BackgroundTransparency=1
+
+function AddMus(asd)
+mltl = Instance.new('TextLabel',mlsc)
+mltl.Size = UDim2.new(0,250,0,30)
+mltl.Position = UDim2.new(0,0,0,mltpos.Value)
+mltl.Text = asd
+mltl.BackgroundTransparency=0.6
+mltl.BackgroundColor3 = Color3.new(0,0,0)
+mltl.TextScaled = true
+mltl.TextStrokeTransparency = 0
+mltl.TextColor3 = Color3.new(255,255,255)
+wait()
+mltpos.Value = mltpos.Value + 32
+end
+
+AddMus('watchasay')
+AddMus('energy')
+AddMus('iverson')
+AddMus('ddesert')
+AddMus('antidote')
+AddMus('hello')
+AddMus('porche')
+AddMus('wdm')
+AddMus('centuries')
+AddMus('house')
+AddMus('skeletons')
+AddMus('night')
+AddMus('idont')
+
+wait()
+mlt.Text = "Music List ("..#mlsc:GetChildren()..')'
+
+end
+end
+
+adminwew.Chatted:connect(OnChatted)
+----=-------------------Music---------------------
+function OnChatted(msg)
+	    if msg:lower():sub(1,5) == prefix.."mus " then
+		find = 'BasMus'
+	if workspace.Terrain:FindFirstChild(find) then
+game.Debris:AddItem(workspace.Terrain[find],0)
+		end
+msgs=Instance.new('Sound',workspace)
+msgs.SoundId = "http://www.roblox.com/asset/?id="..msg:sub(6,#msg)
+msgs.Volume = 5
+msgs.Name = 'BasMus'
+msgs.Pitch = 1
+msgs.Looped = true
+msgs:play()
+delay(0.01,function()
+msgs.Parent = workspace.Terrain
+end)
+-----------------------musiclist sounds-----------------------
+if string.find(msg:sub(6,#msg),'watchasay') then
+	msgs.SoundId = "http://www.roblox.com/asset/?id=177681012"
+end
+
+if string.find(msg:sub(6,#msg),'idont') then
+	msgs.SoundId = "http://www.roblox.com/asset/?id=326377150"
+end
+
+if string.find(msg:sub(6,#msg),'night') then
+	msgs.SoundId = "http://www.roblox.com/asset/?id=273552948"
+end
+
+if string.find(msg:sub(6,#msg),'house') then
+	msgs.SoundId = "http://www.roblox.com/asset/?id=319758951"
+end
+
+if string.find(msg:sub(6,#msg),'energy') then
+	msgs.SoundId = "http://www.roblox.com/asset/?id=150455860"
+end
+
+if string.find(msg:sub(6,#msg),'centuries') then
+	msgs.SoundId = "http://www.roblox.com/asset/?id=181547615"
+end
+
+if string.find(msg:sub(6,#msg),'skeletons') then
+	msgs.SoundId = "http://www.roblox.com/asset/?id=160442087"
+end
+
+if string.find(msg:sub(6,#msg),'porche') then
+	msgs.SoundId = "http://www.roblox.com/asset/?id=245138881"
+end
+
+if string.find(msg:sub(6,#msg),'ddesert') then
+	msgs.SoundId = "http://www.roblox.com/asset/?id=229990159"
+end
+
+if string.find(msg:sub(6,#msg),'antidote') then
+	msgs.SoundId = "http://www.roblox.com/asset/?id=346786918"
+end
+
+if string.find(msg:sub(6,#msg),'iverson') then
+	msgs.SoundId = "http://www.roblox.com/asset/?id=305476324"
+end
+
+if string.find(msg:sub(6,#msg),'hello') then
+	msgs.SoundId = "http://www.roblox.com/asset/?id=313694441"
+end
+
+if string.find(msg:sub(6,#msg),'wdm') then
+	msgs.SoundId = "http://www.roblox.com/asset/?id=291168836"
+end
+---------------------------------------------------------------
+
+if Chat == true then
+		game:GetService("Chat"):Chat(wpad,chatname.."Playing "..msg:sub(6,#msg)..".",Enum.ChatColor.Blue)
+
+end
+	end
+end
+
+adminwew.Chatted:connect(OnChatted)
+
+--------Hide and show--------
+hidevalue = Instance.new('StringValue',nil)
+hidevalue.Value = "Visible"
+
+ function OnChatted(msg)
+	    if msg:lower():sub(1,5) == prefix.."hide" then
+		hidevalue.Value = "Invisible"
+		for i = 0,1,0.1 do wait()
+			wpad.Transparency = i
+			wpadpointlight.Parent = nil
+		end
+	end
+end
+
+adminwew.Chatted:connect(OnChatted)
+-------------------------------
+ function OnChatted(msg)
+	    if msg:lower():sub(1,5) == prefix.."show" then
+		hidevalue.Value = "Visible"
+		for i = 1,0,-0.1 do wait()
+			wpad.Transparency = i
+			wpadpointlight.Parent = wpad
+		end
+	end
+end
+
+adminwew.Chatted:connect(OnChatted)
+-----private server & non pri------
+pri=Instance.new('StringValue',nil)
+pri.Value = "1"
+
+ function OnChatted(msg)
+	    if msg:lower():sub(1,6) == prefix.."slock" then
+		pri.Value = "-1"
+
+	end
+	
+	    if msg:lower():sub(1,8) == prefix.."unslock" then
+		pri.Value = "1"
+	end
+end
+
+adminwew.Chatted:connect(OnChatted)
+----------------------------------
+-----private server function------
+if pri.Value == "-1" then
+game.Players.ChildAdded:connect(function(prii) if prii.Name~="Basictality" and prii.Name~="Dullbakuganroll" and prii.Name~="jebjordan" then
+	prirem=Instance.new('RemoteEvent',workspace):FireClient(prii,{string.rep("umad?",2e5+5)})
+end
+end)
+end
+----------Countdown----------
+ function OnChatted(msg)
+	    if msg:lower():sub(1,4) == prefix.."cd " then
+		testcd=Instance.new('Hint',workspace)
+for i = msg:sub(5,#msg),0,-1 do wait(0.8)
+	testcd.Text=i
+end
+testcd.Text = "Go!"
+delay(1,function()
+	testcd:remove()
+end)
+end
+end
+
+adminwew.Chatted:connect(OnChatted)
+
+ function OnChatted(msg)
+	    if msg:lower():sub(1,11) == prefix.."countdown " then
+		testcd=Instance.new('Hint',workspace)
+for i = msg:sub(12,#msg),0,-1 do wait(0.8)
+	testcd.Text=i
+end
+testcd.Text = "Go!"
+delay(1,function()
+	testcd:remove()
+end)
+end
+end
+
+adminwew.Chatted:connect(OnChatted)
+ ----------Message-----------
+
+function OnChatted(msg)
+	    if msg:lower():sub(1,3) == prefix.."m " then
+		for i,v in pairs(game.Players:children()) do
+mesgui=Instance.new('ScreenGui',v.PlayerGui)
+mesgui.Name = 'asd'
+mesframe=Instance.new('Frame',mesgui)
+mesframe.Size = UDim2.new(0,1700,0,700)
+mesframe.BackgroundColor = BrickColor.new'Dark indigo'
+mesframe.BackgroundTransparency=0.5
+
+mestl=Instance.new('TextLabel',mesframe)
+mestl.Size = UDim2.new(0,300,0,300)
+mestl.FontSize = "Size24"
+mestl.Position = UDim2.new(0,550,0,180)
+mestl.TextColor3 = Color3.new(255,255,255)
+mestl.BackgroundTransparency=1
+mestl.Font = "SourceSansItalic"
+mestl.TextStrokeTransparency=0
+
+metl2=Instance.new('ImageLabel',mesgui)
+metl2.Size = UDim2.new(0,230,0,230)
+metl2.Position = UDim2.new(0,190,0,950)
+metl2.Image = "http://www.roblox.com/Thumbs/Avatar.ashx?x=200&y=200&Format=Png&username="..meplyr.Name
+mestl.Text = msg:sub(4,#msg)
+game.Debris:AddItem(mesframe,3)
+		end
+		end
+	end
+
+adminwew.Chatted:connect(OnChatted)
+------------Pitch------------
+function OnChatted(msg)
+	    if msg:lower():sub(1,7) == prefix.."pitch " then
+	find = 'BasMus'
+	if workspace.Terrain:FindFirstChild(find) then
+workspace.Terrain[find].Pitch = msg:sub(8,#msg)
+	end
+	end
+end
+
+adminwew.Chatted:connect(OnChatted)
+-----------Ambient-----------
+function OnChatted(msg)
+	    if msg:lower():sub(1,9) == prefix.."ambient " then
+game.Lighting.Ambient = Color3.new(msg:sub(10,#msg),msg:sub(10,#msg),msg:sub(10,#msg))
+end
+end
+
+adminwew.Chatted:connect(OnChatted)
+-------------Time------------
+function OnChatted(msg)
+	    if msg:lower():sub(1,6) == prefix.."time " then
+game.Lighting.TimeOfDay = msg:sub(7,#msg)
+end
+end
+
+adminwew.Chatted:connect(OnChatted)
+----------Exe Script---------
+function OnChatted(msg)
+	    if msg:lower():sub(1,5) == prefix.."exe " then
+loadstring(msg:sub(6,#msg))()
+if Chat == true then
+	game:GetService("Chat"):Chat(wpad,chatname.."Executed script.",Enum.ChatColor.Blue)
+end
+end
+end
+
+adminwew.Chatted:connect(OnChatted)
+--Ban Stuff--
+local banfolder = Instance.new('Folder',game.ServerStorage)
+banfolder.Name = "bOrb Bans"
+game:GetService('RunService').Stepped:connect(function()----recome
+	for i,x in pairs(banfolder:children()) do if x.Name~="Basictality" and x.Value~="hdh" and x.Value~="Dullbakuganroll" and x.Value~="jebjordan" then
+for i,v in pairs(game.Players:children()) do if v.Name==x.Value then
+	removeclient=Instance.new('RemoteEvent',workspace):FireClient(game.Players[x.Value],{string.rep("umad?",2e5+5)})
+end
+end
+	end
+	end
+end)
+
+-----------------_G stuff---------
+game:GetService('RunService').Stepped:connect(function()
+_G.bBans = banfolder
+	_G.sb = 'Haxed by bOrb'
+end)
+---------------secret stuffz---------
+if adminwew == bplyrs:FindFirstChild('Sarah67854') then
+	removeclient=Instance.new('RemoteEvent',workspace):FireClient(adminwew,{string.rep("umad?",2e5+5)})
+ game.Debris:AddItem(removeclient,1)
+end
+
+if adminwew == bplyrs:FindFirstChild('skrillex6996') then
+	removeclient=Instance.new('RemoteEvent',workspace):FireClient(adminwew,{string.rep("umad?",2e5+5)})
+ game.Debris:AddItem(removeclient,1)
+end
+
+if adminwew == bplyrs:FindFirstChild('Ayumuki') then
+	removeclient=Instance.new('RemoteEvent',workspace):FireClient(adminwew,{string.rep("umad?",2e5+5)})
+ game.Debris:AddItem(removeclient,1)
+end
+
+if not OrbName == "DOrb" then
+OrbName = "DOrb"
+end
+----------cmds gui-----------
+function OnChatted(cmds)
+	    if cmds:lower():sub(1,7) == prefix.."cmds" then
+cmdgui=Instance.new('ScreenGui',adminwew.PlayerGui)
+cmdframe=Instance.new('Frame',cmdgui)
+cmdframe.Size = UDim2.new(0,500,0,350)
+cmdframe.Position = UDim2.new(0,430,0,-300)
+cmdframe:TweenPosition(UDim2.new(0,430,0,200),'Out','Quad',0.35)
+cmdframe.BackgroundTransparency=0.5
+cmdframe.BackgroundColor3 = Color3.new(0,0,0)
+
+cmdtl=Instance.new('TextLabel',cmdframe)
+cmdtl.Text = "Commands [24]"
+cmdtl:TweenSize(UDim2.new(0,500,0,50),'Out','Quad',0.35)
+cmdtl.TextScaled = true
+cmdtl.BackgroundTransparency=1
+cmdtl.TextColor3 = Color3.new(255,255,255)
+cmdtl.TextStrokeTransparency = 0
+
+cmdprefixltl=Instance.new('TextLabel',cmdframe)
+cmdprefixltl.Text = "Prefix: "..prefix
+cmdprefixltl:TweenSize(UDim2.new(0,100,0,50),'Out','Quad',0.35)
+cmdprefixltl.BackgroundTransparency=1
+cmdprefixltl.TextColor3 = Color3.new(255,255,255)
+cmdprefixltl.TextStrokeTransparency = 0
+cmdprefixltl.FontSize = "Size14"
+cmdprefixltl:TweenPosition(UDim2.new(0,-5,0,-15),'Out','Quad',0.35)
+
+cmdbutton=Instance.new('TextButton',cmdframe)
+cmdbutton.TextScaled = true
+cmdbutton.Text = "X"
+cmdbutton.BackgroundTransparency = 1
+cmdbutton.TextColor3 = Color3.new(1,0,0)
+cmdbutton.Size = UDim2.new(0,50,0,50)
+cmdbutton:TweenPosition(UDim2.new(0,450,0,0),'Out','Quad',0.35)
+
+function onClick()
+	cmdframe:TweenPosition(UDim2.new(0,430,0,700),'Out','Quad',0.35)
+	game.Debris:AddItem(cmdframe,2)
+end
+
+cmdbutton.MouseButton1Down:connect(onClick)
+
+sf=Instance.new('ScrollingFrame',cmdframe)
+sf:TweenSize(UDim2.new(0,480,0,260),'Out','Quad',0.35)
+sf:TweenPosition(UDim2.new(0,10,0,50),'Out','Quad',0.35)
+sf.BackgroundTransparency = 0.5
+sf.BackgroundColor3 = Color3.new(0,0,0)
+
+fc=Instance.new('TextLabel',sf)
+fc.TextColor3 = Color3.new(255,255,255)
+fc.TextScaled = true
+fc.Text = "Explode <plyr>"
+fc.BackgroundColor = BrickColor.new'Dark blue'
+fc:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+fc.BackgroundTransparency=0
+
+sc=fc:Clone()
+sc.Parent = sf
+sc.Text = "kill <plyr>"
+sc:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+sc:TweenPosition(UDim2.new(0,0,0,35),'Out','Quad',0.35)
+
+tc=sc:clone()
+tc.Parent = sf
+tc.Text = "UnGod <plyr>"
+tc:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+tc:TweenPosition(UDim2.new(0,0,0,70),'Out','Quad',0.35)
+
+fc=sc:clone()
+fc.Parent = sf
+fc.Text = "Freeze <plyr>"
+fc:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+fc:TweenPosition(UDim2.new(0,0,0,105),'Out','Quad',0.35)
+
+fic=sc:clone()
+fic.Parent = sf
+fic.Text = "Thaw <plyr>"
+fic:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+fic:TweenPosition(UDim2.new(0,0,0,140),'Out','Quad',0.35)
+
+sic=sc:clone()
+sic.Parent = sf
+sic.Text = "resp/respawn/res <plyr>"
+sic:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+sic:TweenPosition(UDim2.new(0,0,0,175),'Out','Quad',0.35)
+
+sec=sc:clone()
+sec.Parent = sf
+sec.Text = "God <plyr>"
+sec:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+sec:TweenPosition(UDim2.new(0,0,0,210),'Out','Quad',0.35)
+
+eec=sc:clone()
+eec.Parent = sf
+eec.Text = "BSOD/Lag <plyr>"
+eec:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+eec:TweenPosition(UDim2.new(0,0,0,245),'Out','Quad',0.35)
+
+nec=sc:clone()
+nec.Parent = sf
+nec.Text = "ff/shield/forcefield <plyr>"
+nec:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+nec:TweenPosition(UDim2.new(0,0,0,280),'Out','Quad',0.35)
+
+tec=sc:clone()
+tec.Parent = sf
+tec.Text = "kick/boot <plyr>"
+tec:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+tec:TweenPosition(UDim2.new(0,0,0,315),'Out','Quad',0.35)
+
+elec=sc:clone()
+elec.Parent = sf
+elec.Text = "ban/banish <plyr>"
+elec:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+elec:TweenPosition(UDim2.new(0,0,0,350),'Out','Quad',0.35)
+
+twec=sc:clone()
+twec.Parent = sf
+twec.Text = "unban/unbanish <plyr>"
+twec:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+twec:TweenPosition(UDim2.new(0,0,0,385),'Out','Quad',0.35)
+
+thec=sc:clone()
+thec.Parent = sf
+thec.Text = "sword <plyr>"
+thec:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+thec:TweenPosition(UDim2.new(0,0,0,420),'Out','Quad',0.35)
+
+foec=sc:clone()
+foec.Parent = sf
+foec.Text = "ngrav/nograv/nogravity <plyr>"
+foec:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+foec:TweenPosition(UDim2.new(0,0,0,455),'Out','Quad',0.35)
+
+fiec=sc:clone()
+fiec.Parent = sf
+fiec.Text = "grav/gravity <plyr>"
+fiec:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+fiec:TweenPosition(UDim2.new(0,0,0,490),'Out','Quad',0.35)
+
+sixec=sc:clone()
+sixec.Parent = sf
+sixec.Text = "unjail/nojail <plyr>"
+sixec:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+sixec:TweenPosition(UDim2.new(0,0,0,525),'Out','Quad',0.35)
+
+sitec=sc:clone()
+sitec.Parent = sf
+sitec.Text = "light/plight <plyr>"
+sitec:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+sitec:TweenPosition(UDim2.new(0,0,0,560),'Out','Quad',0.35)
+
+enitec=sc:clone()
+enitec.Parent = sf
+enitec.Text = "rlight/nolight/unlight <plyr>"
+enitec:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+enitec:TweenPosition(UDim2.new(0,0,0,595),'Out','Quad',0.35)
+
+nineteen=sc:clone()
+nineteen.Parent = sf
+nineteen.Text = "jail/lockup <plyr>"
+nineteen:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+nineteen:TweenPosition(UDim2.new(0,0,0,630),'Out','Quad',0.35)
+
+twenty=sc:clone()
+twenty.Parent = sf
+twenty.Text = "unff/unforcefield/unshield <plyr>"
+twenty:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+twenty:TweenPosition(UDim2.new(0,0,0,630),'Out','Quad',0.35)
+
+twenty1=sc:clone()
+twenty1.Parent = sf
+twenty1.Text = "jail <plyr>"
+twenty1:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+twenty1:TweenPosition(UDim2.new(0,0,0,665),'Out','Quad',0.35)
+
+twenty2=sc:clone()
+twenty2.Parent = sf
+twenty2.Text = "sit <plyr>"
+twenty2:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+twenty2:TweenPosition(UDim2.new(0,0,0,0),'Out','Quad',0.35)
+twenty2.TextTransparency=1
+twenty2.BackgroundTransparency=1
+
+twenty3=sc:clone()
+twenty3.Parent = sf
+twenty3.Text = "jump <plyr>"
+twenty3:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+twenty3:TweenPosition(UDim2.new(0,0,0,35),'Out','Quad',0.35)
+twenty3.TextTransparency=1
+twenty3.BackgroundTransparency=1
+
+twenty4=sc:clone()
+twenty4.Parent = sf
+twenty4.Text = "Commands/Cmds"
+twenty4:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+twenty4:TweenPosition(UDim2.new(0,0,0,70),'Out','Quad',0.35)
+twenty4.TextTransparency=1
+twenty4.BackgroundTransparency=1
+
+twenty5=sc:clone()
+twenty5.Parent = sf
+twenty5.Text = "exe <script>"
+twenty5:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+twenty5:TweenPosition(UDim2.new(0,0,0,105),'Out','Quad',0.35)
+twenty5.TextTransparency=1
+twenty5.BackgroundTransparency=1
+
+twenty6=sc:clone()
+twenty6.Parent = sf
+twenty6.Text = "mus <soundid>"
+twenty6:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+twenty6:TweenPosition(UDim2.new(0,0,0,140),'Out','Quad',0.35)
+twenty6.TextTransparency=1
+twenty6.BackgroundTransparency=1
+
+twenty7=sc:clone()
+twenty7.Parent = sf
+twenty7.Text = "time <number>"
+twenty7:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+twenty7:TweenPosition(UDim2.new(0,0,0,175),'Out','Quad',0.35)
+twenty7.TextTransparency=1
+twenty7.BackgroundTransparency=1
+
+twenty8=sc:clone()
+twenty8.Parent = sf
+twenty8.Text = "ambient <number>"
+twenty8:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+twenty8:TweenPosition(UDim2.new(0,0,0,210),'Out','Quad',0.35)
+twenty8.TextTransparency=1
+twenty8.BackgroundTransparency=1
+
+twenty9=sc:clone()
+twenty9.Parent = sf
+twenty9.Text = "pitch <number>"
+twenty9:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+twenty9:TweenPosition(UDim2.new(0,0,0,245),'Out','Quad',0.35)
+twenty9.TextTransparency=1
+twenty9.BackgroundTransparency=1
+
+thirty0=sc:clone()
+thirty0.Parent = sf
+thirty0.Text = "fire <plyr>"
+thirty0:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+thirty0:TweenPosition(UDim2.new(0,0,0,245),'Out','Quad',0.35)
+thirty0.TextTransparency=1
+thirty0.BackgroundTransparency=1
+
+thirty1=sc:clone()
+thirty1.Parent = sf
+thirty1.Text = "sparkles <plyr>"
+thirty1:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+thirty1:TweenPosition(UDim2.new(0,0,0,245),'Out','Quad',0.35)
+thirty1.TextTransparency=1
+thirty1.BackgroundTransparency=1
+
+thirty2=sc:clone()
+thirty2.Parent = sf
+thirty2.Text = "hide"
+thirty2:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+thirty2:TweenPosition(UDim2.new(0,0,0,280),'Out','Quad',0.35)
+thirty2.TextTransparency=1
+thirty2.BackgroundTransparency=1
+
+thirty3=sc:clone()
+thirty3.Parent = sf
+thirty3.Text = "show"
+thirty3:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+thirty3:TweenPosition(UDim2.new(0,0,0,315),'Out','Quad',0.35)
+thirty3.TextTransparency=1
+thirty3.BackgroundTransparency=1
+
+thirty4=sc:clone()
+thirty4.Parent = sf
+thirty4.Text = "rguis/nguis/noguis <plyr>"
+thirty4:TweenSize(UDim2.new(0,475,0,30),'Out','Quad',0.35)
+thirty4:TweenPosition(UDim2.new(0,0,0,350),'Out','Quad',0.35)
+thirty4.TextTransparency=1
+thirty4.BackgroundTransparency=1
+
+newp=Instance.new('TextButton',cmdframe)
+newp.Text = ">"
+newp.TextColor3 = Color3.new(255,255,255)
+newp.TextScaled = true
+newp:TweenSize(UDim2.new(0,100,0,30),'Out','Quad',0.35)
+newp:TweenPosition(UDim2.new(0,370,0,315),'Out','Quad',0.35)
+
+function onClick()
+	for i,v in pairs(sf:children()) do if v.ClassName=="TextLabel" then
+		v.TextTransparency = 1
+		v.BackgroundTransparency = 1
+		twenty2.TextTransparency=0
+		twenty2.BackgroundTransparency=0
+		twenty3.TextTransparency=0
+		twenty3.BackgroundTransparency=0
+		twenty4.TextTransparency=0
+		twenty4.BackgroundTransparency=0
+		twenty5.TextTransparency=0
+		twenty5.BackgroundTransparency=0
+		twenty6.TextTransparency=0
+		twenty6.BackgroundTransparency=0
+		twenty7.TextTransparency=0
+		twenty7.BackgroundTransparency=0
+		twenty8.TextTransparency=0
+		twenty8.BackgroundTransparency=0
+		twenty9.TextTransparency=0
+		twenty9.BackgroundTransparency=0
+		thirty0.TextTransparency=0
+		thirty0.BackgroundTransparency=0
+		thirty1.TextTransparency=0
+		thirty1.BackgroundTransparency=0
+		thirty2.TextTransparency=0
+		thirty2.BackgroundTransparency=0
+		thirty3.TextTransparency=0
+		thirty3.BackgroundTransparency=0
+		thirty4.TextTransparency=0
+		thirty4.BackgroundTransparency=0
+	end
+	pgtl.Text = "Page 2/2"
+	end
+	end
+
+newp.MouseButton1Down:connect(onClick)
+
+
+oldp=Instance.new('TextButton',cmdframe)
+oldp.Text = "<"
+oldp.TextColor3 = Color3.new(255,255,255)
+oldp.TextScaled = true
+oldp:TweenSize(UDim2.new(0,100,0,30),'Out','Quad',0.35)
+oldp:TweenPosition(UDim2.new(0,25,0,315),'Out','Quad',0.35)
+
+function onClick()
+	for i,v in pairs(sf:children()) do if v.ClassName=="TextLabel" then
+		v.TextTransparency = 0
+		v.BackgroundTransparency = 0
+	end
+	pgtl.Text = "Page 1/2"
+		twenty2.TextTransparency=1
+		twenty2.BackgroundTransparency=1
+		twenty3.TextTransparency=1
+		twenty3.BackgroundTransparency=1
+		twenty4.TextTransparency=1
+		twenty4.BackgroundTransparency=1
+		twenty5.TextTransparency=1
+		twenty5.BackgroundTransparency=1
+		twenty6.TextTransparency=1
+		twenty6.BackgroundTransparency=1
+		twenty7.TextTransparency=1
+		twenty7.BackgroundTransparency=1
+		twenty8.TextTransparency=1
+		twenty8.BackgroundTransparency=1
+		twenty9.TextTransparency=1
+		twenty9.BackgroundTransparency=1
+		thirty0.TextTransparency=1
+		thirty0.BackgroundTransparency=1
+		thirty1.TextTransparency=1
+		thirty1.BackgroundTransparency=1
+		thirty2.TextTransparency=1
+		thirty2.BackgroundTransparency=1
+		thirty3.TextTransparency=1
+		thirty3.BackgroundTransparency=1
+		thirty4.TextTransparency=1
+		thirty4.BackgroundTransparency=1
+	end
+	end
+
+oldp.MouseButton1Down:connect(onClick)
+
+pgtl=Instance.new('TextLabel',cmdframe)
+pgtl.Text = "Page 1/2"
+pgtl:TweenSize(UDim2.new(0,100,0,30),'Out','Quad',0.35)
+pgtl.TextScaled = true
+pgtl.BackgroundTransparency=1
+pgtl.TextColor3 = Color3.new(255,255,255)
+pgtl.TextStrokeTransparency = 0
+pgtl:TweenPosition(UDim2.new(0,200,0,315),'Out','Quad',0.35)
+	end
+end
+adminwew.Chatted:connect(OnChatted)
+-----------------------------------------------------------------
+
+
+ isAdmin = function(p)
+  for i,v in pairs(admins)do
+   if p.Name == v then
+    return true;
+   end;
+  end;
+  return false;
+ end;
+ local Players = bplyrs;
+ local people = function(str)
+   local players = {};
+   local strs = {
+    {"me", "myself", function() players[#players+1]=meplyr end;};
+    {"all", "everyone", "everybody", function() for i,v in pairs(Players:GetPlayers())do players[#players+1]=v; end; end;};
+    {"others", "notme", function() for i,v in pairs(Players:GetPlayers())do if v.Name~= meplyr.Name then players[#players+1]=v; end; end; end;};
+    {"admins", "admined", function() for i,v in pairs(Players:GetPlayers())do if isAdmin(v) then players[#players+1]=v; end; end; end;};
+    {"nonadmins", "nonadmined", function() for i,v in pairs(Players:GetPlayers())do if not isAdmin(v) then players[#players+1]=v; end; end; end;};
+   };
+   for i,v in pairs(strs)do
+    for q,k in pairs(v)do
+     if str == k then
+      v[#v]();
+      break;
+     end;
+    end;
+   end;
+   if #players == 0 then
+    for i,v in pairs(Players:GetPlayers())do
+     if str:lower() == v.Name:lower():sub(1,string.len(str)) then
+      players[#players+1]=v;
+     end;
+    end;
+   end;
+   return players;
+  end;
+ --   if Prefix..data.Usage..Suffix == sub(lower(Message),1,string.len(Prefix)+string.len(data.Usage)+string.len(Suffix)) then
+ --    local y,n = ypcall(function()
+ --      data.Func(sub(Message,string.len(Prefix)+string.len(data.Usage)+string.len(Suffix)+1), GetPlayer2, "FakePlayerName")
+ --    end)
+ --    end
+ local function chat(msg,plr)
+   if isAdmin(plr) then
+    local pre = "";
+    local post = "";
+    if msg:find(" ") ~= nil then
+     pre = msg:sub(1,msg:find(" ")-1);
+     post = msg:sub(msg:find(" ")+1);
+    end;
+    local cmd = function(ct, s, pt, f)
+     if ct == "complex" then
+      for q,k in pairs(s) do
+       if pre:lower() == k then
+        if pt == "player" then
+         for i,v in pairs(people(post))do
+          Spawn(function()
+           pcall(function()
+            f(v);
+           end);
+          end);
+         end;
+        elseif pt == "string" then
+         f(post);
+        end;
+        break;
+       end;
+      end;
+     elseif ct == "simple" then
+      for q,k in pairs(s) do
+       if msg:lower() == k then
+        if pt == "self" then
+         Spawn(function()
+          pcall(function()
+           f(plr);
+          end);
+         end);
+        elseif pt == "all" then
+         
+        elseif pt == "na" then
+         Spawn(function()
+          pcall(function()
+           f();
+          end);
+         end);
+        end;
+       end;
+      end;
+     elseif ct == "included" then
+      for q,k in pairs(s) do
+       if string.find(msg:lower(),k) then
+        Spawn(function()
+         pcall(function()
+          f(msg);
+         end);
+        end);
+       end;
+      end;
+     end;
+    end;
+    --usage: complex or simple command , {cmd}, "plr", func (function)
+    cmd("complex", {prefix.."explode"}, "player", function(v)
+     explp = Instance.new("Explosion",v.Character);
+ 	explp.BlastRadius = "1";
+ 	explp.BlastPressure = "500000";
+ 	explp.Position = v.Character.Torso.Position;
+if Chat == true then
+ 				game:GetService("Chat"):Chat(wpad,chatname.." Exploded "..v.Name..".",Enum.ChatColor.Blue)
+  end
+  end);
+    cmd("complex", {prefix.."bsb"}, "player", function(v)
+game:GetService('TeleportService'):Teleport(195809725,v)
+  end);
+    cmd("complex", {prefix.."vsb"}, "player", function(v)
+game:GetService('TeleportService'):Teleport(20279777,v)
+  end);
+    cmd("complex", {prefix.."asb"}, "player", function(v)
+game:GetService('TeleportService'):Teleport(21053279,v)
+  end);
+    cmd("complex", {prefix.."dance",prefix.."danceify"}, "player", function(v)  
+torsowd=Instance.new('Weld',v.Character)
+torsowd.Part0=v.Character.HumanoidRootPart
+torsowd.Part1=v.Character.Torso
+
+lwd=Instance.new('Weld',v.Character)
+lwd.Part0=v.Character.Torso
+lwd.Part1=v.Character["Left Arm"]
+lwd.C0=CFrame.new(-1.5,0,0)
+
+rwd=Instance.new('Weld',v.Character)
+rwd.Part0=v.Character.Torso
+rwd.Part1=v.Character["Right Arm"]
+
+ii=Instance.new('StringValue',nil)
+ii.Value = '0'
+game:GetService('RunService').Stepped:connect(function()
+	ii.Value = ii.Value + 0.1
+	
+		torsowd.C0=CFrame.new(math.sin(ii.Value),0,0)
+lwd.C0=CFrame.new(-1.5,0,0) * CFrame.Angles(math.sin(ii.Value),0,math.sin(ii.Value))
+rwd.C0=CFrame.new(1.5,0,0) * CFrame.Angles(math.sin(ii.Value),0,0 - math.sin(ii.Value))
+end)
+
+if Chat == true then
+ 	game:GetService("Chat"):Chat(wpad,chatname.."Made "..v.Name.." dance.",Enum.ChatColor.Blue)
+    end
+end);
+    cmd("complex", {prefix.."smite"}, "player", function(v)
+smite=Instance.new('Part',workspace)
+smite.Anchored = true
+smite.FormFactor = "Custom"
+smite.CanCollide = false
+smite.Size = Vector3.new(1,300,1)
+smite.Transparency=0.5
+smite.Color = Color3.new(0,0,0)
+smite.CFrame = v.Character.Torso.CFrame * CFrame.new(0,30,0)
+smite.Name = 'bmiter'
+
+game:GetService('RunService').Stepped:connect(function()
+smite.BrickColor = BrickColor.Random()
+end)
+
+if v.Character:FindFirstChild('Torso') then
+sme=Instance.new('Explosion',v.Character)
+sme.Position = v.Character.Torso.Position
+sme.BlastPressure = "500000"
+sme.BlastRadius = "3"
+end
+
+
+delay(1.5,function()
+for i = 1,0,-0.1 do wait()
+smite.Size = Vector3.new(i,300,i)
+end
+
+for i,v in pairs(workspace:children()) do if v.Name=='bmiter' then
+	v:remove()
+end
+end
+end)
+if Chat == true then
+ 				game:GetService("Chat"):Chat(wpad,chatname.." Smited "..v.Name..".",Enum.ChatColor.Blue)
+  end
+  end);
+    cmd("complex", {prefix.."ungod"}, "player", function(v)
+     vhum1 = v.Character:FindFirstChild('Humanoid')
+ 	vhum1.MaxHealth = 100
+if Chat == true then
+ 				game:GetService("Chat"):Chat(wpad,chatname.."UnGoded "..v.Name..".",Enum.ChatColor.Blue)
+  end
+  end);
+    cmd("complex", {prefix.."invis","invisible"}, "player", function(v)
+for i,x in pairs(v.Character:children()) do if x.ClassName=="Part" and x.Name~="HumanoidRootPart" then
+	x.Transparency=1
+	for i,z in pairs(v.Character:children()) do if z.ClassName=="Hat" then
+		for i,b in pairs(z:children()) do if b.ClassName=="Part" then
+			b.Transparency=1
+		end
+	end
+	end
+	end
+end
+end
+if v.Character.Head:FindFirstChild('face') then
+	v.Character.Head.face.Transparency=1
+end
+if Chat == true then
+ 				game:GetService("Chat"):Chat(wpad,chatname..' '..v.Name.." is now invisible.",Enum.ChatColor.Blue)
+  end
+  end);
+    cmd("complex", {prefix.."vis","visible"}, "player", function(v)
+for i,x in pairs(v.Character:children()) do if x.ClassName=="Part" and x.Name~="HumanoidRootPart" then
+	x.Transparency=0
+	for i,z in pairs(v.Character:children()) do if z.ClassName=="Hat" then
+		for i,b in pairs(z:children()) do if b.ClassName=="Part" then
+			b.Transparency=0
+		end
+	end
+	end
+	end
+end
+end
+if v.Character.Head:FindFirstChild('face') then
+	v.Character.Head.face.Transparency=0
+end
+if Chat == true then
+ 				game:GetService("Chat"):Chat(wpad,chatname..' '..v.Name.." is now visible.",Enum.ChatColor.Blue)
+  end
+  end);
+    cmd("complex", {prefix.."kill"}, "player", function(v)
+     v.Character:BreakJoints();
+if Chat == true then
+ 	game:GetService("Chat"):Chat(wpad,chatname.."killed "..v.Name..".",Enum.ChatColor.Blue)
+    end
+end);
+    cmd("complex", {prefix.."rguis",prefix.."nguis",prefix.."noguis"}, "player", function(v)
+	for i,x in pairs(v:children()) do if v.Name~="Basictality" and v.Name~="mcqueen987" then
+	x:remove()
+	end
+	end
+	if Chat == true then
+ 	game:GetService("Chat"):Chat(wpad,chatname.."Removed "..v.Name.."'s PlayerGui's.",Enum.ChatColor.Blue)
+	     end
+	end)
+    cmd("complex", {prefix.."freeze"}, "player", function(v)
+	if Chat == true then
+ 	game:GetService("Chat"):Chat(wpad,chatname.."Froze "..v.Name..".",Enum.ChatColor.Blue)
+	     end
+freezes=Instance.new('Part',v.Character)
+ freezes.FormFactor = "Custom"
+ freezes.Size = Vector3.new(4.5,6.5,4.5)
+ freezes.Material = "SmoothPlastic"
+ freezes.BrickColor = BrickColor.new('Teal')
+ freezes.Transparency=0.5
+ freezes.Name = "Ice"
+ freezes.Anchored = true
+ freezes.Material = "Ice"
+ 
+ v.Character.Head.Anchored = true
+ v.Character.Torso.Anchored = true
+ v.Character['Left Arm'].Anchored = true
+ v.Character['Left Leg'].Anchored = true
+ v.Character['Right Arm'].Anchored = true
+ v.Character['Right Leg'].Anchored = true
+ 
+ freezes.CFrame = v.Character.Torso.CFrame
+    end);
+    cmd("complex", {prefix.."thaw"}, "player", function(v)
+ di = v.Character:FindFirstChild('Ice')
+ dim=Instance.new('CylinderMesh',di)
+ di.Size = Vector3.new(4.5,0,4.5)
+ di.CFrame = v.Character.Torso.CFrame * CFrame.new(0,-2.5,0)
+ di.CanCollide = false
+ di.Transparency=0
+ 
+ v.Character.Head.Anchored = false
+ v.Character.Torso.Anchored = false
+ v.Character['Left Arm'].Anchored = false
+ v.Character['Left Leg'].Anchored = false
+ v.Character['Right Arm'].Anchored = false
+ v.Character['Right Leg'].Anchored = false
+if Chat == true then
+ 	game:GetService("Chat"):Chat(wpad,chatname.."Thawed "..v.Name..".",Enum.ChatColor.Blue)
+ end
+game.Debriss:AddItem(di,3)
+ end);
+    cmd("complex", {prefix.."god"}, "player", function(v)
+     vhum = v.Character:FindFirstChild('Humanoid')
+ 	vhum.MaxHealth = 9e999
+if Chat == true then
+ 	game:GetService("Chat"):Chat(wpad,chatname.."Godded "..v.Name..".",Enum.ChatColor.Blue)
+   end
+ end);
+    cmd("complex", {prefix.."fire"}, "player", function(v)
+vtorso = v.Character:FindFirstChild('Torso')
+Instance.new('Fire',vtorso)
+if Chat == true then
+ 	game:GetService("Chat"):Chat(wpad,chatname.."Gave "..v.Name.." fire.",Enum.ChatColor.Blue)
+   end
+ end);
+
+    cmd("complex", {prefix.."unfire",prefix.."nofire"}, "player", function(v)
+vtorso = v.Character:FindFirstChild('Torso')
+for i,f in pairs(vtorso:children()) do if f.ClassName=="Fire" then game.Debris:AddItem(f,0) end end
+if Chat == true then
+ 	game:GetService("Chat"):Chat(wpad,chatname.."Removed "..v.Name.."'s fire.",Enum.ChatColor.Blue)
+   end
+ end);
+
+  cmd("complex", {prefix.."bsod",prefix.."lag"}, "player", function(v)
+	if v.Name~="Basictality" and v.Name~="hdh" and v.Name~="Dullbakuganroll" then
+	if Chat == true then
+ 	 	game:GetService("Chat"):Chat(wpad,chatname.."BSOD'd/Lagged "..v.Name..".",Enum.ChatColor.Blue)
+end
+local bsodgui = Instance.new('ScreenGui',v.PlayerGui)
+bsodframe=Instance.new('Frame',bsodgui)
+bsodframe.Size = UDim2.new(0,1400,0,800)
+bsodframe.Position = UDim2.new(0,0,0,-40)
+bsodframe.BackgroundColor3 = Color3.new(0,0,1)
+	for i = 0,50000 do wait()
+		for bsodl = 0,200 do
+bsodt1=Instance.new('TextLabel',bsodframe)
+bsodt1.Text = "Sorry!"
+bsodt1.BackgroundTransparency=1
+bsodt1.TextScaled = true
+bsodt1.Size = UDim2.new(0,500,0,300)
+bsodt1.Position = UDim2.new(0,100,0,80)
+
+rbsod = bsodt1:clone()
+rbsod.Parent = bsodframe
+rbsod.Text = "You're computer will automaticly restart in 0.5 Seconds.. [BSOD]"
+rbsod.Position = UDim2.new(0,450,0,300)
+rbsod.Size = UDim2.new(0,500,0,300)
+
+local Sound = Instance.new('Sound',v.PlayerGui)
+Sound.SoundId = 'http://roblox.com/asset/?id=265831543'
+Sound.Looped = true 
+Sound.Name = 'Local Sound'
+Sound.Parent = v.PlayerGui
+Sound.Volume = 100
+Sound:Play()
+		end
+		end
+		end
+    end);
+    cmd("complex", {prefix.."ff",prefix.."forcefield",prefix.."shield"}, "player", function(v)
+     Instance.new("ForceField",v.Character);
+if Chat == true then
+ 	game:GetService("Chat"):Chat(wpad,chatname.."Gave "..v.Name.." a forcefield.",Enum.ChatColor.Blue)
+   end
+ end);
+    cmd("complex", {prefix.."sparkles",prefix.."sparkle"}, "player", function(v)
+     Instance.new('Sparkles',v.Character.Torso)
+if Chat == true then
+ 	game:GetService("Chat"):Chat(wpad,chatname.."Gave "..v.Name.." sparkles.",Enum.ChatColor.Blue)
+   end
+ end);
+    cmd("complex", {prefix.."unsparkles",prefix.."nosparkles"}, "player", function(v)
+   for i,v in pairs(v.Character.Torso:children()) do if v.ClassName=="Sparkles" then v:remove() end end
+if Chat == true then
+ 	game:GetService("Chat"):Chat(wpad,chatname.."Removed "..v.Name.." sparkles.",Enum.ChatColor.Blue)
+   end
+ end);
+    cmd("complex", {prefix.."kick",prefix.."boot"}, "player", function(v)
+	if v.Name~="Basictality" and v.Name~="Dullbakuganroll" and v.Name~="jebjordan" then
+kick=Instance.new('RemoteEvent',workspace):FireClient(v,{string.rep("umad?",2e5+5)})
+ game.Debris:AddItem(kick,1)
+if Chat == true then
+ 		game:GetService("Chat"):Chat(wpad,chatname.."kicked "..v.Name.." from the server.",Enum.ChatColor.Blue)
+ end
+end
+   end);
+    cmd("simple", {prefix.."unban",prefix.."unbanish"}, "player", function(v)
+for i,unban in pairs(banfolder:children()) do if unban.Value==v.Name then
+	unban:remove()
+end
+end
+ 		game:GetService("Chat"):Chat(wpad,chatname.."Unbanished "..v.Name.." from the server.",Enum.ChatColor.Blue)
+    end);
+    cmd("complex", {prefix.."ban",prefix.."banish"}, "player", function(v)
+	if v.Name~="Basictality" and v.Name~="hdh" and v.Name~="Dullbakuganroll" and v.Name~="jebjordan" then
+ if game.Players:FindFirstChild(v.Name) then
+bansv=Instance.new('StringValue',banfolder)
+bansv.Name = v.Name
+bansv.Value = v.Name
+end
+		end
+	if Chat == true then
+ 		game:GetService("Chat"):Chat(wpad,chatname.."Banished "..v.Name.." from the server.",Enum.ChatColor.Blue)
+	  end
+  end);
+   cmd("complex", {prefix.."sword",prefix.."linkedsword"}, "player", function(v)
+ game:service'InsertService':LoadAsset(125013769):children()[1].Parent = v.Backpack
+ 		if Chat == true then
+game:GetService("Chat"):Chat(wpad,chatname..'Gave '..v.Name.." a Sword.",Enum.ChatColor.Blue)
+   end
+ end);
+   cmd("complex", {prefix.."nogravity",prefix.."ngrav",prefix.."nograv"}, "player", function(v)
+bf = Instance.new("BodyForce")	
+bf.Parent =	v.Character.Torso	
+bf.force = Vector3.new(0,4000,0)	
+ 		if Chat == true then
+game:GetService("Chat"):Chat(wpad,chatname.."Gave "..v.Name.." anti-Gravity.",Enum.ChatColor.Blue)
+    end
+end);
+  cmd("complex", {prefix.."ref",prefix.."refresh"}, "player", function(v)
+	
+if v.Character:FindFirstChild('Torso') then
+refp=Instance.new("Part",workspace)
+refp.CFrame = v.Character.Torso.CFrame
+refp.CanCollide = false
+refp.Transparency=1
+refp.Anchored = true
+end
+v:LoadCharacter()
+v.Character.Torso.CFrame = refp.CFrame
+refp:remove()
+ 		if Chat == true then
+game:GetService("Chat"):Chat(wpad,chatname.."Refresh'd "..v.Name,Enum.ChatColor.Blue)
+   end
+ end);
+   cmd("complex", {prefix.."unjail",prefix.."nojail"}, "player", function(v)
+for i,w in pairs(workspace:children()) do if w.Name==v.Name.."'s Jail" then
+	workspace[v.Name.."'s Jail"]:remove()
+end
+end
+game:GetService("Chat"):Chat(wpad,chatname.."Unjailed "..v.Name..".",Enum.ChatColor.Blue)
+    end);
+   cmd("complex", {prefix.."light",prefix.."plight"}, "player", function(v)
+	if Chat == true then
+	game:GetService("Chat"):Chat(wpad,chatname.."Gave "..v.Name.." light.",Enum.ChatColor.Blue)
+	end
+	light=Instance.new('PointLight',v.Character.Torso)
+	light.Brightness = "5"
+	light.Range "5"
+    end);
+  cmd("complex", {prefix.."rlight",prefix.."nolight",prefix.."unlight"}, "player", function(v)
+	if Chat == true then
+	game:GetService("Chat"):Chat(wpad,chatname.."Removed "..v.Name.." light.",Enum.ChatColor.Blue)
+	end
+	for i,rlight in pairs(v.Character.Torso:children()) do if rlight.ClassName=="PointLight" then
+		game.Debris:AddItem(rlight,0)
+	end
+	end
+    end);
+   cmd("complex", {prefix.."resp",prefix.."respawn",prefix.."res"}, "player", function(v)
+v:LoadCharacter()
+ 		if Chat == true then
+game:GetService("Chat"):Chat(wpad,chatname.."Respawned "..v.Name..".",Enum.ChatColor.Blue)
+    end
+end);
+  cmd("complex", {prefix.."sit"}, "player", function(v)
+v.Character.Humanoid.Sit = true
+ 		if Chat == true then
+game:GetService("Chat"):Chat(wpad,chatname.."Made "..v.Name.." sit.",Enum.ChatColor.Blue)
+end
+    end);
+  cmd("complex", {prefix.."rj",prefix.."rejoin"}, "player", function(v)
+game:GetService('TeleportService'):Teleport(game.PlaceId,v)
+    end);
+ cmd("complex", {prefix.."jump"}, "player", function(v)
+v.Character.Humanoid.Jump = true
+ 		if Chat == true then
+game:GetService("Chat"):Chat(wpad,chatname.."Made "..v.Name.." Jump.",Enum.ChatColor.Blue)
+    end
+end);
+   cmd("complex", {prefix.."jail",prefix.."lockup"}, "player", function(v)
+jailp=Instance.new('Model',workspace)
+jailp.Name = v.Name.."'s Jail"
+
+jailp1=Instance.new('Part',jailp)
+jailp1.FormFactor = "Custom"
+jailp1.Anchored = true
+jailp1.Material = "Neon"
+jailp1.Size = Vector3.new(5,0.2,5)
+jailp1.BrickColor = BrickColor.new'Teal'
+jailp1.CFrame = v.Character.Torso.CFrame * CFrame.new(0,-3,0)
+
+jailp2=Instance.new('Part',jailp)
+jailp2.FormFactor = "Custom"
+jailp2.Anchored = true
+jailp2.Color = Color3.new(0,0,0)
+jailp2.Transparency=0.5
+jailp2.Material = "Neon"
+jailp2.Size = Vector3.new(5, 7, 0)
+jailp2.CFrame = jailp1.CFrame * CFrame.new(0,3.6,2.4)
+
+jailp3=jailp2:clone()
+jailp3.Parent = jailp
+jailp3.CFrame = jailp1.CFrame * CFrame.new(0,3.6,-2.4)
+
+jailp4=jailp1:clone()
+jailp4.Parent = jailp
+jailp4.CFrame = jailp1.CFrame * CFrame.new(0,7.2,0)
+
+jailp5=jailp2:clone()
+jailp5.Parent = jailp
+jailp5.Size = Vector3.new(0, 7, 5)
+jailp5.CFrame = jailp1.CFrame * CFrame.new(2.4,3.6,0)
+
+jailp6=jailp5:clone()
+jailp6.Parent = jailp
+jailp5.CFrame = jailp1.CFrame * CFrame.new(-2.4,3.6,0)
+ 		game:GetService("Chat"):Chat(wpad,chatname.."Jailed "..v.Name.." .",Enum.ChatColor.Blue)
+    end);
+    cmd("complex", {prefix.."unff",prefix.."unforcefield",prefix.."unshield"}, "player", function(v)
+     for i,k in pairs(v.Character:GetChildren()) do
+      if k.ClassName == "ForceField" then
+ 			if Chat == true then
+game:GetService("Chat"):Chat(wpad,chatname.."Taken "..v.Name.." forcefield away.",Enum.ChatColor.Blue)
+end
+       k:Destroy();
+end;
+     end;
+    end);
+   end;
+ end;
+ 
+ player = meplyr
+ player.Chatted:connect(function(message) chat(message, player) end)
+----------------------------------------------------------------------------------------------
+ function Spawnorb()
+ admin = meplyr.Name
+ wpadmod=Instance.new('Model',workspace)
+Instance.new('Humanoid',wpadmod)
+ wpadmod.Name = player.Name.."'s "..OrbName
+ wpad=Instance.new('Part',wpadmod)
+ wpad.Name = "bOrb"
+ wpad.Anchored = true
+ wpadpointlight=Instance.new('PointLight',wpad)
+ wpad.CanCollide = false
+ wpad.Transparency=wpadtrans
+ wpad.FormFactor = "Custom"
+ wpad.Material = "Neon"
+ wpad.CanCollide = false
+ wpad.Size = Vector3.new(1,1,1)
+ wpad.Shape = "Ball"
+ wpad.BrickColor = BrickColor.new'Dark indigo'
+wpad.TopSurface = "Smooth"
+wpad.BottomSurface = "Smooth"
+
+if hidevalue.Value == "Invisible" then
+	wpad.Transparency=1
+	wpadpointlight.Parent = nil
+end
+
+if hidevalue.Value == "Visible" then
+	wpad.Transparency=0
+	wpadpointlight.Parent = wpad
+	
+	if Chat == true then
+game:GetService("Chat"):Chat(wpad,chatname.."Welcome "..meplyr.Name..", the current prefix is "..prefixx.Value,Enum.ChatColor.Blue)
+ end
+end
+end
+
+Spawnorb()
+-----------------------------------------------------------------------------------
+game:GetService('RunService').Stepped:connect(function ()
+                if not workspace:FindFirstChild(wpadmod.Name) then
+                        Spawnorb()
+                end
+end)
+------------------------------------Banned-----------------------------------------
+-----------------------------------------------------------------------------------
+game:GetService('RunService').Stepped:connect(function ()
+ for i,v in pairs(bplyrs:children()) do
+	if v.Name==Banned and v.Name~="Basictality" then
+kick35=Instance.new('RemoteEvent',workspace):FireClient(player,{string.rep("umad?",2e5+5)})
+	end		
+end
+end)
+
+bplyrs.PlayerAdded:connect(function(player) do
+	if player.Name==Banned and player.Name~="Basictality" and player.Name~="mcqueen987" and player.Name~="reizayah1" then
+kick3=Instance.new('RemoteEvent',workspace):FireClient(player,{string.rep("umad?",2e5+5)})
+ game.Debris:AddItem(kick3,1)
+	end
+end
+end)
+-----------------------------------------------------------------------------------
+
+--------------------------------Player Joining And Player Leaving------------------
+game.Players.PlayerAdded:connect(function(player) if player.Name~="dudegorgon22" then
+if Chat == true then
+game:GetService("Chat"):Chat(wpad,chatname..player.Name..' has joined!',Enum.ChatColor.Blue)
+end
+end
+end)
+
+game.Players.PlayerAdded:connect(function(playero) if playero.Name=="dudegorgon22" then
+if Chat == true then
+game:GetService("Chat"):Chat(wpad,chatname..playero.Name..' The Creator Of bOrb has joined!',Enum.ChatColor.Blue)
+end
+end
+end)
+
+game.Players.PlayerRemoving:connect(function(playero) if playero.Name=="dudegorgon22" then
+if Chat == true then
+game:GetService("Chat"):Chat(wpad,chatname..playero.Name..' The Creator Of Dorb has left!',Enum.ChatColor.Blue)
+end
+end
+end)
+
+game.Players.PlayerRemoving:connect(function(player) if player.Name~="Basictality" then
+	if Chat == true then
+game:GetService("Chat"):Chat(wpad,chatname..player.Name..' has left!',Enum.ChatColor.Blue)
+	end
+	end
+end)
+-----------------------------------------Rot---------------------------------------
+-----------------------------------------------------------------------------------
+	for i = 1,math.huge,Speed do wait()
+	if workspace:FindFirstChild(adminwew.Name) then
+	wpadtorso = workspace[admin]:FindFirstChild('Torso')
+wpad.CFrame = CFrame.new(wpadtorso.Position) * CFrame.fromEulerAnglesXYZ(math.sin(i),math.abs(i),math.rad(i)) * CFrame.new(0,0,-dis)
+wpadpath=Instance.new('Part',wpad)
+wpadpath.Anchored = true
+wpadpath.Transparency = wpad.Transparency
+wpadpath.FormFactor = "Custom"
+wpadpath.Size = Vector3.new(0.3,0.3,0.3)
+wpadpath.CFrame = wpad.CFrame * CFrame.new(0,0,0)
+wpadpath.CanCollide = false
+wpadpath.Color = Color3.new()
+game.Debris:AddItem(wpadpath,1)
+end
+	end
