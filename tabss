@@ -1,0 +1,1093 @@
+local p = game.Players.LocalPlayer
+script.Parent = p
+print 'Tabs loading!'
+local cmdss = {";ff",";k",";r",";kill",";uf",";ws","!afk",";listp",";nt",";music",";mo","/tls",";g",";mc",";cmds"}
+p.Chatted:connect(function(message)
+        if message == ";ff" then
+                ff()
+        elseif message == ";k" then
+                k()
+        elseif message == ";r" then
+                r()
+        elseif message == ";kill" then
+                kill()
+        elseif message == ";uf" then
+                unff()
+        elseif message == ";cmds" then
+                cmd()
+        elseif message == ";nt" then
+                nortab()
+        elseif message == ";mc" then
+                mc()        
+        elseif message == "!afk" then
+                afk()
+        elseif message == ";listp" then
+                listp()
+        elseif message == ";music" then
+                music()
+        elseif message == ";mo" then
+                moptions()
+        elseif message == ";ws" then
+                ws()        
+        elseif message == "/tls" then
+                tls()        
+        elseif message == ";g" then
+                god()
+        end
+end)
+local speeds = {"1","10","20","30","40","50","60","70","80","90","100"}
+local sound = {"1","2","3","4"}
+local ban = {"grubsteak","Snazzah","Kyrorr"}
+function ff()
+        local check = game.Workspace:FindFirstChild("sTabs1O")
+        if check ~= nil then
+                check:Destroy()
+        else
+                print'Checked'
+        end
+        local bm = Instance.new("Model")
+        bm.Parent = p
+        bm.Name = "sTabs1O"
+        local players = game.Players:GetChildren()
+        for i = 1,#players do
+                bm = p.sTabs1O
+                local m = Instance.new("Model")
+                local tab = Instance.new("Part")
+                local sb = Instance.new("SelectionBox")
+                local h = Instance.new("Humanoid")
+                local cd = Instance.new("ClickDetector")
+                m.Parent = bm
+                m.Name = players[i].Name
+                tab.Parent = m
+                tab.Name = "Head"
+                tab.CanCollide = false
+                tab.Anchored = true
+                tab.Locked = true
+                tab.Transparency = 0.0009
+                tab.BottomSurface = "Smooth"
+                tab.TopSurface = "Smooth"
+                tab.FormFactor = "Custom"
+                tab.Size = Vector3.new(2,2,2)
+                tab.Position = Vector3.new(0,4,0)
+                sb.Parent = tab
+                sb.Adornee = tab
+                sb.Color3 = Color3.new(0,0,0)
+                sb.LineThickness = 0.01
+                sb.SurfaceTransparency = 0.2
+                sb.SurfaceColor3 = Color3.new(0,0,255)
+                h.Parent = m
+                h.MaxHealth = 0
+                cd.Parent = tab
+                local function move()
+                coroutine.resume(coroutine.create(function()
+                        local orbit = p.Character.Torso
+                        local dist = 3 + #players
+                        local speed = 0.005
+                        local angle = 150 * i
+                        local o = tab
+                        local pos = o.Position
+                        while wait() do
+                                o.CFrame = orbit.CFrame*CFrame.fromEulerAnglesXYZ(0,angle*speed,0) * CFrame.new(0,0,dist)
+                                o.CFrame = CFrame.new(o.Position,orbit.Position)
+                                angle = angle + 1
+                        end
+                end))
+                end
+                move()
+                tab.ClickDetector.MouseClick:connect(function(c)
+                        if c == p then
+                        local find = game.Players:FindFirstChild(m.Name)
+                        if find ~= nil then
+                                tab.Size = Vector3.new(1.5,1.5,1.5)
+                                Instance.new("ForceField", find.Character)
+                                wait(.5)
+                                tab.Size = Vector3.new(2,2,2)
+                        end
+                        end
+                end)
+        end
+        
+end
+
+function k()
+        local check = game.Workspace:FindFirstChild("sTabs1O")
+        if check ~= nil then
+                check:Destroy()
+        else
+                print'Checked'
+        end
+        local bm = Instance.new("Model")
+        bm.Parent = game.Workspace
+        bm.Name = "sTabs1O"
+        local players = game.Players:GetChildren()
+        for i = 1,#players do
+                bm = game.Workspace.sTabs1O
+                local m = Instance.new("Model")
+                local tab = Instance.new("Part")
+                local sb = Instance.new("SelectionBox")
+                local h = Instance.new("Humanoid")
+                local cd = Instance.new("ClickDetector")
+                m.Parent = bm
+                m.Name = players[i].Name
+                tab.Parent = m
+                tab.Name = "Head"
+                tab.CanCollide = false
+                tab.Anchored = true
+                tab.Locked = true
+                tab.Transparency = 0.0009
+                tab.BottomSurface = "Smooth"
+                tab.TopSurface = "Smooth"
+                tab.FormFactor = "Custom"
+                tab.Size = Vector3.new(2,2,2)
+                tab.Position = Vector3.new(0,4,0)
+                sb.Parent = tab
+                sb.Adornee = tab
+                sb.Color3 = Color3.new(0,0,0)
+                sb.LineThickness = 0.01
+                sb.SurfaceTransparency = 0.2
+                sb.SurfaceColor3 = Color3.new(255,255,255)
+                h.Parent = m
+                h.MaxHealth = 0
+                cd.Parent = tab
+                local function move()
+                coroutine.resume(coroutine.create(function()
+                        local orbit = p.Character.Torso
+                        local dist = 3 + #players
+                        local speed = 0.005
+                        local angle = 150 * i
+                        local o = tab
+                        local pos = o.Position
+                        while wait() do
+                                o.CFrame = orbit.CFrame*CFrame.fromEulerAnglesXYZ(0,angle*speed,0) * CFrame.new(0,0,dist)
+                                o.CFrame = CFrame.new(o.Position,orbit.Position)
+                                angle = angle + 1
+                        end
+                end))
+                end
+                move()
+                tab.ClickDetector.MouseClick:connect(function(c)
+                        if c == p then
+                        local find = game.Players:FindFirstChild(m.Name)
+                        if find ~= nil then
+                                tab.Size = Vector3.new(1.5,1.5,1.5)
+                                find.Character:Destroy()
+                                find:remove()
+                                wait(.5)
+                                tab.Size = Vector3.new(2,2,2)
+                        end
+                        end
+                end)
+        end        
+end
+
+function kill()
+        local check = game.Workspace:FindFirstChild("sTabs1O")
+        if check ~= nil then
+                check:Destroy()
+        else
+                print'Checked'
+        end
+        local bm = Instance.new("Model")
+        bm.Parent = game.Workspace
+        bm.Name = "sTabs1O"
+        local players = game.Players:GetChildren()
+        for i = 1,#players do
+                bm = game.Workspace.sTabs1O
+                local m = Instance.new("Model")
+                local tab = Instance.new("Part")
+                local sb = Instance.new("SelectionBox")
+                local h = Instance.new("Humanoid")
+                local cd = Instance.new("ClickDetector")
+                m.Parent = bm
+                m.Name = players[i].Name
+                tab.Parent = m
+                tab.Name = "Head"
+                tab.CanCollide = false
+                tab.Anchored = true
+                tab.Locked = true
+                tab.Transparency = 0.0009
+                tab.BottomSurface = "Smooth"
+                tab.TopSurface = "Smooth"
+                tab.FormFactor = "Custom"
+                tab.Size = Vector3.new(2,2,2)
+                tab.Position = Vector3.new(0,4,0)
+                sb.Parent = tab
+                sb.Adornee = tab
+                sb.Color3 = Color3.new(0,0,0)
+                sb.LineThickness = 0.01
+                sb.SurfaceTransparency = 0.2
+                sb.SurfaceColor3 = Color3.new(255,0,0)
+                h.Parent = m
+                h.MaxHealth = 0
+                cd.Parent = tab
+                local function move()
+                coroutine.resume(coroutine.create(function()
+                        local orbit = p.Character.Torso
+                        local dist = 3 + #players
+                        local speed = 0.005
+                        local angle = 150 * i
+                        local o = tab
+                        local pos = o.Position
+                        while wait() do
+                                o.CFrame = orbit.CFrame*CFrame.fromEulerAnglesXYZ(0,angle*speed,0) * CFrame.new(0,0,dist)
+                                o.CFrame = CFrame.new(o.Position,orbit.Position)
+                                angle = angle + 1
+                        end
+                end))
+                end
+                move()
+                tab.ClickDetector.MouseClick:connect(function(c)
+                        if c == p then
+                        local find = game.Players:FindFirstChild(m.Name)
+                        if find ~= nil then
+                                tab.Size = Vector3.new(1.5,1.5,1.5)
+                                find.Character.Humanoid.MaxHealth = 0
+                                wait(.5)
+                                tab.Size = Vector3.new(2,2,2)
+                        end
+                        end
+                end)
+        end        
+end
+
+function unff()
+        local check = game.Workspace:FindFirstChild("sTabs1O")
+        if check ~= nil then
+                check:Destroy()
+        else
+                print'Checked'
+        end
+        local bm = Instance.new("Model")
+        bm.Parent = game.Workspace
+        bm.Name = "sTabs1O"
+        local players = game.Players:GetChildren()
+        for i = 1,#players do
+                bm = game.Workspace.sTabs1O
+                local m = Instance.new("Model")
+                local tab = Instance.new("Part")
+                local sb = Instance.new("SelectionBox")
+                local h = Instance.new("Humanoid")
+                local cd = Instance.new("ClickDetector")
+                m.Parent = bm
+                m.Name = players[i].Name
+                tab.Parent = m
+                tab.Name = "Head"
+                tab.CanCollide = false
+                tab.Anchored = true
+                tab.Locked = true
+                tab.Transparency = 0.0009
+                tab.BottomSurface = "Smooth"
+                tab.TopSurface = "Smooth"
+                tab.FormFactor = "Custom"
+                tab.Size = Vector3.new(2,2,2)
+                tab.Position = Vector3.new(0,4,0)
+                sb.Parent = tab
+                sb.Adornee = tab
+                sb.Color3 = Color3.new(0,0,0)
+                sb.LineThickness = 0.01
+                sb.SurfaceTransparency = 0.2
+                sb.SurfaceColor3 = Color3.new(0,255,255)
+                h.Parent = m
+                h.MaxHealth = 0
+                cd.Parent = tab
+                local function move()
+                coroutine.resume(coroutine.create(function()
+                        local orbit = p.Character.Torso
+                        local dist = 3 + #players
+                        local speed = 0.005
+                        local angle = 150 * i
+                        local o = tab
+                        local pos = o.Position
+                        while wait() do
+                                o.CFrame = orbit.CFrame*CFrame.fromEulerAnglesXYZ(0,angle*speed,0) * CFrame.new(0,0,dist)
+                                o.CFrame = CFrame.new(o.Position,orbit.Position)
+                                angle = angle + 1
+                        end
+                end))
+                end
+                move()
+                tab.ClickDetector.MouseClick:connect(function(c)
+                        if c == p then
+                        local find = game.Players:FindFirstChild(m.Name)
+                        if find ~= nil then
+                                local u = find.Character:FindFirstChild("ForceField")
+                                tab.Size = Vector3.new(1.5,1.5,1.5)
+                                u:Destroy()
+                                wait(.5)
+                                tab.Size = Vector3.new(2,2,2)
+                        end
+                        end
+                end)
+        end
+end
+
+function ws()
+                local check = game.Workspace:FindFirstChild("sTabs1O")
+        if check ~= nil then
+                check:Destroy()
+        else
+                print'Checked'
+        end
+        local bm = Instance.new("Model")
+        bm.Parent = game.Workspace
+        bm.Name = "sTabs1O"
+        for i = 1,#speeds do
+                bm = game.Workspace.sTabs1O
+                local m = Instance.new("Model")
+                local tab = Instance.new("Part")
+                local sb = Instance.new("SelectionBox")
+                local h = Instance.new("Humanoid")
+                local cd = Instance.new("ClickDetector")
+                m.Parent = bm
+                m.Name = speeds[i]
+                tab.Parent = m
+                tab.Name = "Head"
+                tab.CanCollide = false
+                tab.Anchored = true
+                tab.Locked = true
+                tab.Transparency = 0.0009
+                tab.BottomSurface = "Smooth"
+                tab.TopSurface = "Smooth"
+                tab.FormFactor = "Custom"
+                tab.Size = Vector3.new(2,2,2)
+                tab.Position = Vector3.new(0,4,0)
+                sb.Parent = tab
+                sb.Adornee = tab
+                sb.Color3 = Color3.new(0,0,0)
+                sb.LineThickness = 0.01
+                sb.SurfaceTransparency = 0.2
+                sb.SurfaceColor3 = Color3.new(255,255,0)
+                h.Parent = m
+                h.MaxHealth = 0
+                cd.Parent = tab
+                local function move()
+                coroutine.resume(coroutine.create(function()
+                        local orbit = p.Character.Torso
+                        local dist = 3 + #speeds
+                        local speed = 0.005
+                        local angle = 100 * i
+                        local o = tab
+                        local pos = o.Position
+                        while wait() do
+                                o.CFrame = orbit.CFrame*CFrame.fromEulerAnglesXYZ(0,angle*speed,0) * CFrame.new(0,0,dist)
+                                o.CFrame = CFrame.new(o.Position,orbit.Position)
+                                angle = angle + 1
+                        end
+                end))
+                end
+                move()
+                tab.ClickDetector.MouseClick:connect(function(c)
+                        if c == p then
+                                tab.Size = Vector3.new(1.5,1.5,1.5)
+                                p.Character.Humanoid.WalkSpeed = m.Name
+                                wait(.5)
+                                tab.Size = Vector3.new(2,2,2)
+                                end
+                end)
+        end
+end
+
+function god()
+        local check = game.Workspace:FindFirstChild("sTabs1O")
+        if check ~= nil then
+                check:Destroy()
+        else
+                print'Checked'
+        end
+        local bm = Instance.new("Model")
+        bm.Parent = game.Workspace
+        bm.Name = "sTabs1O"
+        local players = game.Players:GetChildren()
+        for i = 1,#players do
+                bm = game.Workspace.sTabs1O
+                local m = Instance.new("Model")
+                local tab = Instance.new("Part")
+                local sb = Instance.new("SelectionBox")
+                local h = Instance.new("Humanoid")
+                local cd = Instance.new("ClickDetector")
+                m.Parent = bm
+                m.Name = players[i].Name
+                tab.Parent = m
+                tab.Name = "Head"
+                tab.CanCollide = false
+                tab.Anchored = true
+                tab.Locked = true
+                tab.Transparency = 0.0009
+                tab.BottomSurface = "Smooth"
+                tab.TopSurface = "Smooth"
+                tab.FormFactor = "Custom"
+                tab.Size = Vector3.new(2,2,2)
+                tab.Position = Vector3.new(0,4,0)
+                sb.Parent = tab
+                sb.Adornee = tab
+                sb.Color3 = Color3.new(0,0,0)
+                sb.LineThickness = 0.01
+                sb.SurfaceTransparency = 0.7
+                sb.SurfaceColor3 = Color3.new(0,0,0)
+                h.Parent = m
+                h.MaxHealth = 0
+                cd.Parent = tab
+                local function move()
+                coroutine.resume(coroutine.create(function()
+                        local orbit = p.Character.Torso
+                        local dist = 3 + #players
+                        local speed = 0.005
+                        local angle = 150 * i
+                        local o = tab
+                        local pos = o.Position
+                        while wait() do
+                                o.CFrame = orbit.CFrame*CFrame.fromEulerAnglesXYZ(0,angle*speed,0) * CFrame.new(0,0,dist)
+                                o.CFrame = CFrame.new(o.Position,orbit.Position)
+                                angle = angle + 1
+                        end
+                end))
+                end
+                move()
+                tab.ClickDetector.MouseClick:connect(function(c)
+                        if c == p then
+                        local find = game.Players:FindFirstChild(m.Name)
+                        if find ~= nil then
+                                tab.Size = Vector3.new(1.5,1.5,1.5)
+                                find.Character.Humanoid.MaxHealth = math.huge
+                                wait(.5)
+                                tab.Size = Vector3.new(2,2,2)
+                        end
+                        end
+                end)
+        end        
+end
+
+function cmd()
+        local check = game.Workspace:FindFirstChild("sTabs1O")
+        if check ~= nil then
+                check:Destroy()
+        else
+                print'Checked'
+        end
+        local bm = Instance.new("Model")
+        bm.Parent = game.Workspace
+        bm.Name = "sTabs1O"
+        for i = 1,#cmdss do
+                bm = game.Workspace.sTabs1O
+                local m = Instance.new("Model")
+                local tab = Instance.new("Part")
+                local sb = Instance.new("SelectionBox")
+                local h = Instance.new("Humanoid")
+                local cd = Instance.new("ClickDetector")
+                m.Parent = bm
+                m.Name = cmdss[i]
+                tab.Parent = m
+                tab.Name = "Head"
+                tab.CanCollide = false
+                tab.Anchored = true
+                tab.Locked = true
+                tab.Transparency = 0.0009
+                tab.BottomSurface = "Smooth"
+                tab.TopSurface = "Smooth"
+                tab.FormFactor = "Custom"
+                tab.Size = Vector3.new(2,2,2)
+                tab.Position = Vector3.new(0,4,0)
+                sb.Parent = tab
+                sb.Adornee = tab
+                sb.Color3 = Color3.new(0,0,0)
+                sb.LineThickness = 0.01
+                sb.SurfaceTransparency = 0.2
+                sb.SurfaceColor3 = Color3.new(0,0,0)
+                h.Parent = m
+                h.MaxHealth = 0
+                cd.Parent = tab
+                local function move()
+                coroutine.resume(coroutine.create(function()
+                        local orbit = p.Character.Torso
+                        local dist = 3 + #cmdss
+                        local speed = 0.005
+                        local angle = 100 * i
+                        local o = tab
+                        local pos = o.Position
+                        while wait() do
+                                o.CFrame = orbit.CFrame*CFrame.fromEulerAnglesXYZ(0,angle*speed,0) * CFrame.new(0,0,dist)
+                                o.CFrame = CFrame.new(o.Position,orbit.Position)
+                                angle = angle + 1
+                        end
+                end))
+                end
+                move()
+                tab.ClickDetector.MouseClick:connect(function(c)
+                        if c == p then
+                                tab.Size = Vector3.new(1.5,1.5,1.5)
+                                print(m.Name)
+                                if m.Name == ";ff" then
+                                        ff()
+                                elseif m.Name == ";k" then
+                                        k()
+                                elseif m.Name == ";r" then 
+                                        r()
+                                elseif m.Name == ";kill" then
+                                        kill()
+                                elseif m.Name == ";uf" then
+                                        unff()
+                                elseif m.Name == ";ws" then
+                                        ws()
+                                elseif m.Name == "!afk" then
+                                        afk()
+                                elseif m.Name == ";listp" then
+                                        listp()
+                                elseif m.Name == ";nt" then
+                                        nortab()
+                                elseif m.Name == ";music" then
+                                        music()
+                                elseif m.Name == ";mo" then
+                                        moptions()
+                                elseif m.Name == ";mc" then
+                                        mc()
+                                elseif m.Name == "/tls" then
+                                        tls()
+                                elseif m.Name == ";g" then
+                                        god()
+                                elseif m.Name == ";cmd" then
+                                        print"CMD = Active[Y]"
+                                end
+                                wait(.5)
+                                tab.Size = Vector3.new(2,2,2)
+                        end
+                end)
+        end
+end
+
+function r()
+local r = game.Workspace:FindFirstChild("sTabs1O")
+        if r ~= nil then
+                r:Destroy()
+        else
+                print "Error[TabsNotFound]"
+        end
+end
+print 'Tabs fully loaded'
+
+function afk()
+        local check = game.Workspace:FindFirstChild("sTabs1O")
+        if check ~= nil then
+                check:Destroy()
+        else
+                print'Checked'
+        end
+        local bm = Instance.new("Model")
+        bm.Parent = game.Workspace
+        bm.Name = "sTabs1O"
+        for i = 1,4 do
+                bm = game.Workspace.sTabs1O
+                local m = Instance.new("Model")
+                local tab = Instance.new("Part")
+                local sb = Instance.new("SelectionBox")
+                local h = Instance.new("Humanoid")
+                local cd = Instance.new("ClickDetector")
+                m.Parent = bm
+                m.Name = "[AFK]"
+                tab.Parent = m
+                tab.Name = "Head"
+                tab.CanCollide = false
+                tab.Anchored = true
+                tab.Locked = true
+                tab.Transparency = 0.0009
+                tab.BottomSurface = "Smooth"
+                tab.TopSurface = "Smooth"
+                tab.FormFactor = "Custom"
+                tab.Size = Vector3.new(2,2,2)
+                tab.Position = Vector3.new(0,4,0)
+                sb.Parent = tab
+                sb.Adornee = tab
+                sb.Color3 = Color3.new(0,255,0)
+                sb.LineThickness = 0.01
+                sb.SurfaceTransparency = 0.2
+                sb.SurfaceColor3 = Color3.new(0,0,0)
+                h.Parent = m
+                h.MaxHealth = 0
+                cd.Parent = tab
+                local function move()
+                coroutine.resume(coroutine.create(function()
+                        local orbit = p.Character.Torso
+                        local dist = 4
+                        local speed = 0.05
+                        local angle = 350 * i
+                        local o = tab
+                        local pos = o.Position
+                        while wait() do
+                                o.CFrame = orbit.CFrame*CFrame.fromEulerAnglesXYZ(4,angle*speed,1) * CFrame.new(0,0,dist)
+                                o.CFrame = CFrame.new(o.Position,orbit.Position)
+                                angle = angle + 1
+                        end
+                end))
+                end
+                move()
+                tab.ClickDetector.MouseClick:connect(function()
+                                tab.Size = Vector3.new(1.5,1.5,1.5)
+                                print("AFK")
+                                wait(.5)
+                                tab.Size = Vector3.new(2,2,2)
+                end)
+        end
+end
+
+function nortab()
+                local m = Instance.new("Model")
+                local tab = Instance.new("Part")
+                local sb = Instance.new("SelectionBox")
+                local h = Instance.new("Humanoid")
+                m.Parent = p.Character
+                m.Name = "1O_Tabs"
+                tab.Parent = m
+                tab.Name = "Head"
+                tab.CanCollide = false
+                tab.Anchored = true
+                tab.Locked = true
+                tab.Transparency = 0.0009
+                tab.BottomSurface = "Smooth"
+                tab.TopSurface = "Smooth"
+                tab.FormFactor = "Custom"
+                tab.Size = Vector3.new(.7,.7,.7)
+                tab.Position = Vector3.new(0,4,0)
+                sb.Parent = tab
+                sb.Adornee = tab
+                sb.Color3 = Color3.new(0,0,0)
+                sb.LineThickness = 0.01
+                sb.SurfaceTransparency = 0.2
+                sb.SurfaceColor3 = Color3.new(0,255,0)
+                h.Parent = m
+                h.MaxHealth = 0
+                local function move()
+                coroutine.resume(coroutine.create(function()
+                        local orbit = p.Character.Torso
+                        local dist = 3
+                        local speed = 0.05
+                        local angle = 0
+                        local o = tab
+                        local pos = o.Position
+                        while wait() do
+                                o.CFrame = orbit.CFrame*CFrame.fromEulerAnglesXYZ(2.5,angle*speed,1) * CFrame.new(0,0,dist)
+                                o.CFrame = CFrame.new(o.Position,orbit.Position)
+                                angle = angle + 1
+                        end
+                end))
+                end
+                move()        
+end
+
+function tls()
+        local tls = Instance.new("HopperBin")
+        tls.BinType = "Clone"
+        tls.Parent = p.Backpack
+        local tls = Instance.new("HopperBin")
+        tls.BinType = "Hammer"
+        tls.Parent = p.Backpack
+        local tls = Instance.new("HopperBin")
+        tls.BinType = "Grab"
+        tls.Parent = p.Backpack
+        local tls = Instance.new("HopperBin")
+        tls.BinType = "GameTool"
+        tls.Parent = p.Backpack
+end
+
+function music()
+        local check = game.Workspace:FindFirstChild("sTabs1O")
+        if check ~= nil then
+                check:Destroy()
+        else
+                print'Checked'
+        end
+        local bm = Instance.new("Model")
+        bm.Parent = game.Workspace
+        bm.Name = "sTabs1O"
+                for i = 1,#sound do
+                bm = game.Workspace.sTabs1O
+                local m = Instance.new("Model")
+                local tab = Instance.new("Part")
+                local sb = Instance.new("SelectionBox")
+                local h = Instance.new("Humanoid")
+                local cd = Instance.new("ClickDetector")
+                m.Parent = bm
+                m.Name = sound[i]
+                tab.Parent = m
+                tab.Name = "Head"
+                tab.CanCollide = false
+                tab.Anchored = true
+                tab.Locked = true
+                tab.Transparency = 0.0009
+                tab.BottomSurface = "Smooth"
+                tab.TopSurface = "Smooth"
+                tab.FormFactor = "Custom"
+                tab.Size = Vector3.new(2,2,2)
+                tab.Position = Vector3.new(0,4,0)
+                sb.Parent = tab
+                sb.Adornee = tab
+                sb.Color3 = Color3.new(255,255,255)
+                sb.LineThickness = 0.01
+                sb.SurfaceTransparency = 0.7
+                sb.SurfaceColor3 = Color3.new(255,0,0)
+                h.Parent = m
+                h.MaxHealth = 0
+                cd.Parent = tab
+                local function move()
+                coroutine.resume(coroutine.create(function()
+                        local orbit = p.Character.Torso
+                        local dist = 1 + #speeds
+                        local speed = 0.005
+                        local angle = 100 * i
+                        local o = tab
+                        local pos = o.Position
+                        while wait() do
+                                o.CFrame = orbit.CFrame*CFrame.fromEulerAnglesXYZ(0,angle*speed,0) * CFrame.new(0,0,dist)
+                                o.CFrame = CFrame.new(o.Position,orbit.Position)
+                                angle = angle + 1
+                        end
+                end))
+                end
+                move()
+                tab.ClickDetector.MouseClick:connect(function(c)
+                        if c == p then
+                                tab.Size = Vector3.new(1.5,1.5,1.5)
+                                local mcheck = game.Workspace:FindFirstChild("1OTabsMusic")
+                                if mcheck ~= nil then
+                                        mcheck:Stop()
+                                        mcheck:Destroy()
+                                        print'SoundFound[E = False]'
+                                end
+                                if m.Name == "1" then
+                                        local sid = Instance.new("Sound")
+                                        sid.Parent = game.Workspace
+                                        sid.Name = "1OTabsMusic"
+                                        sid.SoundId = "rbxassetid://300899607"
+                                        sid.Volume = 1
+                                        sid:Play()
+                                        sid.Looped = true
+                                        moptions()        
+                                elseif m.Name == "2" then
+                                        local sid = Instance.new("Sound")
+                                        sid.Parent = game.Workspace
+                                        sid.Name = "1OTabsMusic"
+                                        sid.SoundId = "rbxassetid://172661021"
+                                        sid.Volume = 1
+                                        sid:Play()
+                                        sid.Looped = true
+                                        moptions()        
+                                elseif m.Name == "3" then
+                                        local sid = Instance.new("Sound")
+                                        sid.Parent = game.Workspace
+                                        sid.Name = "1OTabsMusic"
+                                        sid.SoundId = "rbxassetid://144418105"
+                                        sid.Volume = 1
+                                        sid:Play()
+                                        sid.Looped = true        
+                                        moptions()        
+                                elseif m.Name == "4" then
+                                        local sid = Instance.new("Sound")
+                                        sid.Parent = game.Workspace
+                                        sid.Name = "1OTabsMusic"
+                                        sid.SoundId = "rbxassetid://188712851"
+                                        sid.Volume = 1
+                                        sid:Play()
+                                        sid.Looped = true        
+                                        moptions()
+                                end        
+                                wait(.5)
+                                tab.Size = Vector3.new(2,2,2)
+                        end
+                end)
+                end
+end
+
+function mc()
+                local a = Instance.new("ScreenGui")
+        local b = Instance.new("TextBox")
+        local c = Instance.new("TextButton")
+        a.Parent = p.PlayerGui
+        a.Name = "MusicGui"
+        b.Parent = a
+        b.BackgroundColor3 = Color3.new(255,255,255)
+        b.BorderColor3 = Color3.new(0,0,0)
+        b.BorderSizePixel = 2
+        b.Position = UDim2.new(0,300,0,375)
+        b.Size = UDim2.new(0,200,0,35)
+        b.Font = "SourceSans"
+        b.FontSize = "Size14"
+        b.Text = "SoundID"
+        b.TextColor3 = Color3.new(0,0,0)
+        b.Selectable = true
+                c.Parent = a
+        c.BackgroundColor3 = Color3.new(255,255,255)
+        c.BorderColor3 = Color3.new(0,0,0)
+        c.BorderSizePixel = 2
+        c.Position = UDim2.new(0,300,0,415)
+        c.Size = UDim2.new(0,50,0,35)
+        c.Font = "SourceSans"
+        c.FontSize = "Size18"
+        c.Text = "Play"
+        c.TextColor3 = Color3.new(0,0,0)
+                c.MouseButton1Click:connect(function()
+        local t = tostring(b.Text)
+        local s = Instance.new("Sound")
+        s.Name = "1OTabsMusic"
+        s.Parent = game.Workspace
+        s.Volume = 0.2
+        s.Looped = true
+        s.SoundId = "rbxassetid://"..t
+        s:Play()
+                wait(.5)
+                moptions()
+                a:Destroy()
+      end)
+end
+
+function moptions()
+        local sop = {"Play","Stop","Volume+","Volume-","[D]"}
+        local check = game.Workspace:FindFirstChild("sTabs1O")
+        if check ~= nil then
+                check:Destroy()
+        else
+                print'Checked'
+        end
+        local bm = Instance.new("Model")
+        bm.Parent = game.Workspace
+        bm.Name = "sTabs1O"
+                for i = 1,#sop do
+                bm = game.Workspace.sTabs1O
+                local m = Instance.new("Model")
+                local tab = Instance.new("Part")
+                local sb = Instance.new("SelectionBox")
+                local h = Instance.new("Humanoid")
+                local cd = Instance.new("ClickDetector")
+                m.Parent = bm
+                m.Name = sop[i]
+                tab.Parent = m
+                tab.Name = "Head"
+                tab.CanCollide = false
+                tab.Anchored = true
+                tab.Locked = true
+                tab.Transparency = 0.0009
+                tab.BottomSurface = "Smooth"
+                tab.TopSurface = "Smooth"
+                tab.FormFactor = "Custom"
+                tab.Size = Vector3.new(2,2,2)
+                tab.Position = Vector3.new(0,4,0)
+                sb.Parent = tab
+                sb.Adornee = tab
+                sb.Color3 = Color3.new(255,255,255)
+                sb.LineThickness = 0.01
+                sb.SurfaceTransparency = 0.7
+                sb.SurfaceColor3 = Color3.new(255,0,0)
+                h.Parent = m
+                h.MaxHealth = 0
+                cd.Parent = tab
+                local function move()
+                coroutine.resume(coroutine.create(function()
+                        local orbit = p.Character.Torso
+                        local dist = 1 + #speeds
+                        local speed = 0.005
+                        local angle = 100 * i
+                        local o = tab
+                        local pos = o.Position
+                        while wait() do
+                                o.CFrame = orbit.CFrame*CFrame.fromEulerAnglesXYZ(0,angle*speed,0) * CFrame.new(0,0,dist)
+                                o.CFrame = CFrame.new(o.Position,orbit.Position)
+                                angle = angle + 1
+                        end
+                end))
+                end
+                move()
+                tab.ClickDetector.MouseClick:connect(function(c)
+                        if c == p then
+                                tab.Size = Vector3.new(1.5,1.5,1.5)
+                                if m.Name == "Play" then
+                                        local sound = game.Workspace:FindFirstChild("1OTabsMusic")
+                                        if sound ~= nil then
+                                        sound:Play()
+                                        else
+                                                print 'Sound[Error] S = nil'
+                                        end        
+                                elseif m.Name == "Stop" then
+                                        local sound = game.Workspace:FindFirstChild("1OTabsMusic")
+                                        if sound ~= nil then
+                                        sound:Stop()
+                                        else 
+                                                print 'Sound[Error] S = nil'
+                                        end
+                                elseif m.Name == "Volume+" then
+                                local sound = game.Workspace:FindFirstChild("1OTabsMusic")
+                                if sound ~= nil then
+                                sound.Volume = sound.Volume + 0.1
+                                else
+                                print 'Sound[Error] S = nil'
+                                end
+                                elseif m.Name == "Volume-" then
+                                local sound = game.Workspace:FindFirstChild("1OTabsMusic")
+                                if sound ~= nil then
+                                sound.Volume = sound.Volume - 0.1
+                                else
+                                print 'Sound[Error] S = nil'
+                                end
+                                elseif m.Name == "[D]" then
+                                local sound = game.Workspace:FindFirstChild("1OTabsMusic")
+                                if sound ~= nil then
+                                sound:Destroy()
+                                else
+                                print 'Sound[Error] S = nil'
+                                end                        
+                                end
+                                wait(.5)
+                                tab.Size = Vector3.new(2,2,2)
+                                end
+                end)
+                end        
+end
+
+function listp()
+        function listp()
+        local check = game.Workspace:FindFirstChild("sTabs1O")
+        if check ~= nil then
+                check:Destroy()
+        else
+                print'Checked'
+        end
+        local bm = Instance.new("Model")
+        bm.Parent = game.Workspace
+        bm.Name = "sTabs1O"
+        local players = game.Players:GetChildren()
+        for i = 1,#players do
+                bm = game.Workspace.sTabs1O
+                local m = Instance.new("Model")
+                local tab = Instance.new("Part")
+                local sb = Instance.new("SelectionBox")
+                local h = Instance.new("Humanoid")
+                local cd = Instance.new("ClickDetector")
+                m.Parent = bm
+                m.Name = players[i].Name
+                tab.Parent = m
+                tab.Name = "Head"
+                tab.CanCollide = false
+                tab.Anchored = true
+                tab.Locked = true
+                tab.Transparency = 0.0009
+                tab.BottomSurface = "Smooth"
+                tab.TopSurface = "Smooth"
+                tab.FormFactor = "Custom"
+                tab.Size = Vector3.new(2,2,2)
+                tab.Position = Vector3.new(0,4,0)
+                sb.Parent = tab
+                sb.Adornee = tab
+                sb.Color3 = Color3.new(0,0,0)
+                sb.LineThickness = 0.01
+                sb.SurfaceTransparency = 0.4
+                sb.SurfaceColor3 = Color3.new(255,170,0)
+                h.Parent = m
+                h.MaxHealth = 0
+                cd.Parent = tab
+                local function move()
+                coroutine.resume(coroutine.create(function()
+                        local orbit = p.Character.Torso
+                        local dist = 3 + #players
+                        local speed = 0.005
+                        local angle = 150 * i
+                        local o = tab
+                        local pos = o.Position
+                        while wait() do
+                                o.CFrame = orbit.CFrame*CFrame.fromEulerAnglesXYZ(0,angle*speed,0) * CFrame.new(0,0,dist)
+                                o.CFrame = CFrame.new(o.Position,orbit.Position)
+                                angle = angle + 1
+                        end
+                end))
+                end
+                move()
+                tab.ClickDetector.MouseClick:connect(function(c)
+                        if c == p then
+                        local find = game.Players:FindFirstChild(m.Name)
+                        if find ~= nil then
+                                tab.Size = Vector3.new(1.5,1.5,1.5)
+                                print 'PSIG[x]'
+                                wait(.5)
+                                tab.Size = Vector3.new(2,2,2)
+                        end
+                        end
+                end)
+        end
+end
+end
+
+function ply(player)
+        for _,b in pairs(ban) do
+                if player.Name == b then
+                        print 'PlayerAdded[C][B]'
+                        player:Destroy()
+                end
+        end
+                local m = Instance.new("Model")
+                local tab = Instance.new("Part")
+                local sb = Instance.new("SelectionBox")
+                local h = Instance.new("Humanoid")
+                local cd = Instance.new("ClickDetector")
+                m.Parent = game.Workspace
+                m.Name = ("'"..player.Name.."' Has entered![NP][C]")
+                tab.Parent = m
+                tab.Name = "Head"
+                tab.CanCollide = false
+                tab.Anchored = true
+                tab.Locked = true
+                tab.Transparency = 0.0009
+                tab.BottomSurface = "Smooth"
+                tab.TopSurface = "Smooth"
+                tab.FormFactor = "Custom"
+                tab.Size = Vector3.new(2,2,2)
+                tab.Position = Vector3.new(0,4,0)
+                sb.Parent = tab
+                sb.Adornee = tab
+                sb.Color3 = Color3.new(0,0,255)
+                sb.LineThickness = 0.054
+                sb.SurfaceTransparency = 0.2
+                sb.SurfaceColor3 = Color3.new(0,170,255)
+                h.Parent = m
+                h.MaxHealth = 0
+                cd.Parent = tab
+                local function move()
+                coroutine.resume(coroutine.create(function()
+                        local orbit = p.Character.Torso
+                        local dist = 4
+                        local speed = 0.05
+                        local angle = 0
+                        local o = tab
+                        local pos = o.Position
+                        while wait() do
+                                o.CFrame = orbit.CFrame*CFrame.fromEulerAnglesXYZ(4,angle*speed,1) * CFrame.new(0,0,dist)
+                                o.CFrame = CFrame.new(o.Position,orbit.Position)
+                                angle = angle + 1
+                        end
+                end))
+                end
+                move()
+                tab.ClickDetector.MouseClick:connect(function(c)
+                        if c == p then
+                                tab.Size = Vector3.new(1.5,1.5,1.5)
+                                print 'PlayerAdded[Confirmed]'
+                                wait(.5)
+                                tab.Size = Vector3.new(2,2,2)
+                                m:remove()
+                                end
+                end)
+                wait(3)
+                for i = 1,5 do
+                        wait(0.1)
+                        tab.Size = Vector3.new(1.5,1.5,1.5)
+                        wait(0.1)
+                        tab.Size = Vector3.new(2,2,2)
+                end
+        local function autokick()
+                local m = game.Workspace["'"..player.Name.."' Has entered![NP][C]"]
+                if m == nil then
+                print'AutoKick[OFF]'
+                else
+                tab.Size = Vector3.new(.5,.5,.5)
+                tab:Destroy()
+                player.Character:Destroy()
+                player:remove()
+                        end
+                end
+                autokick()
+end
+game.Players.PlayerAdded:connect(ply)
