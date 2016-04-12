@@ -1,4 +1,5 @@
---leaked by LeakingProScripts
+--Made by OpTic Null--
+-- based off of light titan--
 local p = game.Players.LocalPlayer
 local char = p.Character
 local mouse = p:GetMouse()
