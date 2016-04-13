@@ -185,9 +185,6 @@ face.Position = UDim2.new(0,15,0,0)
 face.BackgroundTransparency = 1
 face.Image='rbxassetid://46282671']]--
 ----------------------------------------------------
-game:service'InsertService':LoadAsset(28116846):children()[1].Parent=char
-char["Russian Cop"].Handle.Mesh.Scale = char["Russian Cop"].Handle.Mesh.Scale * 2.5
-char["Russian Cop"].Handle.Mesh.VertexColor = Vector3.new(1,1,1)
 ----------------------------------------------------
 
 z = Instance.new("Sound", char)
