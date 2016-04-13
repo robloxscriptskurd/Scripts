@@ -31,8 +31,8 @@ shirt = Instance.new("Shirt", char)
 shirt.Name = "Shirt"
 pants = Instance.new("Pants", char)
 pants.Name = "Pants"
-char.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=320604115"
-char.Pants.PantsTemplate = "http://www.roblox.com/asset/?id=320604107"
+char.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=251185106"
+char.Pants.PantsTemplate = "http://www.roblox.com/asset/?id=251177371"
 ----------------------------------------------------
 Debounces = {
 on = false;
