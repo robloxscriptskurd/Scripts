@@ -349,7 +349,7 @@ b11.Name = "Mesh"
 b11.Scale = Vector3.new(0.550000012, 1, 0.550000012)
 p12 = Instance.new("Part", m)
 p12.Name = "BladeCenter"
-p12.BrickColor = BrickColor.new("Dark stone grey")
+p12.BrickColor = BrickColor.new("Gold")
 p12.Material = Enum.Material.Concrete
 p12.FormFactor = Enum.FormFactor.Symmetric
 p12.Size = Vector3.new(1, 2, 2)
@@ -428,7 +428,7 @@ b17 = Instance.new("BlockMesh", p17)
 b17.Name = "Mesh"
 b17.Scale = Vector3.new(1, 1, 0.400000006)
 p18 = Instance.new("WedgePart", m)
-p18.BrickColor = BrickColor.new("Dark stone grey")
+p18.BrickColor = BrickColor.new("Gold")
 p18.Name = "BladePart1"
 p18.Material = Enum.Material.Concrete
 p18.Name = "Wedge"
@@ -444,7 +444,7 @@ b18.MeshType = Enum.MeshType.Wedge
 b18.Name = "Mesh"
 b18.Scale = Vector3.new(0.499999911, 0.899999976, 0.699999928)
 p19 = Instance.new("WedgePart", m)
-p19.BrickColor = BrickColor.new("Dark stone grey")
+p19.BrickColor = BrickColor.new("Gold")
 p19.Name = "BladePart2"
 p19.Material = Enum.Material.Concrete
 p19.Name = "Wedge"
@@ -1266,7 +1266,7 @@ function charge()
     mesh.Scale=Vector3.new(10,5,10)
     part2=part:clone()
     part2.Parent=mod
-    part2.BrickColor=BrickColor.new('Bright red')
+    part2.BrickColor=BrickColor.new('Gold')
     mesh2=mesh:clone()
     mesh2.Parent=part2
     mesh2.Scale=Vector3.new(20,10,20)
@@ -1466,8 +1466,8 @@ end
 ----------------------------------------------------
 mouse.KeyDown:connect(function(key)
     if key == "r" then
-        larm.BrickColor = BrickColor.new("Bright red")
-        rarm.BrickColor = BrickColor.new("Bright red")
+        larm.BrickColor = BrickColor.new("Gold")
+        rarm.BrickColor = BrickColor.new("Gold")
         if Debounces.CanAttack == true then
         Debounces.CanAttack = false
         Debounces.on = true
@@ -1568,8 +1568,8 @@ end)
 ----------------------------------------------------
 mouse.KeyDown:connect(function(key)
     if key == "q" then
-        larm.BrickColor = BrickColor.new("Bright red")
-        rarm.BrickColor = BrickColor.new("Bright red")
+        larm.BrickColor = BrickColor.new("Gold")
+        rarm.BrickColor = BrickColor.new("Gold")
         if Debounces.CanAttack == true then
         Debounces.CanAttack = false
         Debounces.on = true
@@ -1890,8 +1890,8 @@ end)
 ----------------------------------------------------
 mouse.KeyDown:connect(function(key)
     if key == "e" then
-    larm.BrickColor = BrickColor.new("Bright red")
-    rarm.BrickColor = BrickColor.new("Bright red")
+    larm.BrickColor = BrickColor.new("Gold")
+    rarm.BrickColor = BrickColor.new("Gold")
         if Debounces.CanAttack == true then
         Debounces.CanAttack = false
         Debounces.on = true
@@ -2185,8 +2185,8 @@ sidz = {"231917888", "231917845", "231917806"}
 ptz = {0.65, 0.7, 0.75, 0.8, 0.95, 1}
 mouse.KeyDown:connect(function(key)
     if key == "f" then
-    larm.BrickColor = BrickColor.new("Bright red")
-    rarm.BrickColor = BrickColor.new("Bright red")
+    larm.BrickColor = BrickColor.new("Gold")
+    rarm.BrickColor = BrickColor.new("Gold")
         if Debounces.CanAttack == true then
             Debounces.CanAttack = false
             Debounces.on = true
@@ -2238,8 +2238,8 @@ end)
 ----------------------------------------------------
 mouse.KeyDown:connect(function(key)
     if key == "g" then
-    larm.BrickColor = BrickColor.new("Bright red")
-    rarm.BrickColor = BrickColor.new("Bright red")
+    larm.BrickColor = BrickColor.new("Gold")
+    rarm.BrickColor = BrickColor.new("Gold")
         if Debounces.CanAttack == true then
         Debounces.CanAttack = false
         Debounces.on = true
@@ -2981,8 +2981,8 @@ end)
 Grab = false
 mouse.KeyDown:connect(function(key)
     if key == "z" then
-    larm.BrickColor = BrickColor.new("Bright red")
-    rarm.BrickColor = BrickColor.new("Bright red")
+    larm.BrickColor = BrickColor.new("Gold")
+    rarm.BrickColor = BrickColor.new("Gold")
         Debounces.on = true
         Debounces.NoIdl = true
         if Grab == false then
