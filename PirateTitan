@@ -188,7 +188,7 @@ face.Image='rbxassetid://46282671']]--
 ----------------------------------------------------
 
 z = Instance.new("Sound", char)
-z.SoundId = "rbxassetid://208583799 "--242463565
+z.SoundId = "rbxassetid://150575966 "--242463565
 z.Looped = true
 z.Pitch = 1
 z.Volume = 10
