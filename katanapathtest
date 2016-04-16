@@ -88,7 +88,7 @@ while true do coroutine.yield()
     end
 end
 end)
-print("Controls: \nQ: Toggle path \nX: Clear all path \nE: Toggle path fade")
+print("Made by: Null/Broken_Code press q for path x for dash")
 pcall(function() Char:FindFirstChild("WepModel"):Destroy() Me.Backpack:FindFirstChild(Name):Destroy() end)
 Activated = false
 Sheathed = true
