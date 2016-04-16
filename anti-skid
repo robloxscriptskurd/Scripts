@@ -34,4 +34,4 @@ Enum.Font.SourceSansBold,
 Enum.FontSize.Size18         
 )
 
-SBExe("c/remove/EISS")
+SBExe("remove/EISS")
