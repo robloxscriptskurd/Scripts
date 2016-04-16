@@ -25,6 +25,34 @@ m.Parent = plr
 mouse.KeyDown:connect(function(key)
     if key == "q" then
         if path == true then path = false elseif path == false then path = true end
+        elseif key == "]" then
+        ----------------------------------------------------
+pcall(function()Character.Shirt:Destroy()
+Character.Pants:Destroy()
+end)
+shirt = Instance.new("Shirt", Character)
+shirt.Name = "Shirt"
+pants = Instance.new("Pants", Character)
+pants.Name = "Pants"
+Character.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=359403460"
+Character.Pants.PantsTemplate = "http://www.roblox.com/asset/?id=267376586"
+----------------------------------------------------
+ID = 138932314
+	p = game:GetService("InsertService"):LoadAsset(ID)
+	p.Parent = workspace
+	p:makeJoints()
+	d = Player.Character:getChildren()
+	for i = 1,#d do
+		if d[i].className=="Hat" then
+			d[i].Parent = nil
+		end
+	end
+	c = p:getChildren()
+	for i = 1,#c do
+		c[i].Parent = Player.Character
+	end
+	p.Parent = nil
+----------------------------------------------------
     end
 end)
 spawn(function()
