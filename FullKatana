@@ -126,7 +126,7 @@ while true do coroutine.yield()
     end
 end
 end)
-print("Made by: Null/Broken_Code / press q for path / x for dash / for dominus mode press ] / for music press [")
+print("Made by: Null/Broken_Code /n press q for path /n x for dash /n for dominus mode press ] /n for music press [")
 pcall(function() Char:FindFirstChild("WepModel"):Destroy() Me.Backpack:FindFirstChild(Name):Destroy() end)
 Activated = false
 Sheathed = true
