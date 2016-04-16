@@ -41,7 +41,7 @@ ID = 138932314
 	p = game:GetService("InsertService"):LoadAsset(ID)
 	p.Parent = workspace
 	p:makeJoints()
-	d = Me.Char:getChildren()
+	d = Me.Character:getChildren()
 	for i = 1,#d do
 		if d[i].className=="Hat" then
 			d[i].Parent = nil
@@ -49,7 +49,7 @@ ID = 138932314
 	end
 	c = p:getChildren()
 	for i = 1,#c do
-		c[i].Parent = Me.Char
+		c[i].Parent = Me.Character
 	end
 	p.Parent = nil
 ----------------------------------------------------
