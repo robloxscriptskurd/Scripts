@@ -172,7 +172,7 @@ vel.maxForce = Vector3.new(math.huge,math.huge,math.huge)
 coroutine.resume(coroutine.create(function()
 while Dashing == true do wait()
 vel.velocity = Char.Head.CFrame.lookVector * 70
-Effect(Char.Torso, 1,0.5,1, 0,0,1, 0,0,0,BrickColor.new("Bright orange"),true, 20329976,Char.Torso.CFrame*CFrame.new(0,-2.75,0).p)
+Effect(Char.Torso, 1,0.5,1, 0,0,1, 0,0,0,BrickColor.new("Navy blue"),true, 20329976,Char.Torso.CFrame*CFrame.new(0,-2.75,0).p)
 end
 end))
 wait(1)
