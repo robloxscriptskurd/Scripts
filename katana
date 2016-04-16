@@ -467,7 +467,7 @@ else
 mod.Name = "-"..dmg
 end
 else
-mod.Name = "KO!"
+mod.Name = "N0 Skop'd"
 crit=true
 end
 if not crit then
