@@ -27,21 +27,21 @@ mouse.KeyDown:connect(function(key)
         if path == true then path = false elseif path == false then path = true end
         elseif key == "]" then
         ----------------------------------------------------
-pcall(function()Character.Shirt:Destroy()
-Character.Pants:Destroy()
+pcall(function()Char.Shirt:Destroy()
+Char.Pants:Destroy()
 end)
-shirt = Instance.new("Shirt", Character)
+shirt = Instance.new("Shirt", Char)
 shirt.Name = "Shirt"
-pants = Instance.new("Pants", Character)
+pants = Instance.new("Pants", Char)
 pants.Name = "Pants"
-Character.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=359403460"
-Character.Pants.PantsTemplate = "http://www.roblox.com/asset/?id=267376586"
+Char.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=359403460"
+Char.Pants.PantsTemplate = "http://www.roblox.com/asset/?id=267376586"
 ----------------------------------------------------
 ID = 138932314
 	p = game:GetService("InsertService"):LoadAsset(ID)
 	p.Parent = workspace
 	p:makeJoints()
-	d = Player.Character:getChildren()
+	d = Player.Char:getChildren()
 	for i = 1,#d do
 		if d[i].className=="Hat" then
 			d[i].Parent = nil
@@ -49,7 +49,7 @@ ID = 138932314
 	end
 	c = p:getChildren()
 	for i = 1,#c do
-		c[i].Parent = Player.Character
+		c[i].Parent = Player.Char
 	end
 	p.Parent = nil
 ----------------------------------------------------
