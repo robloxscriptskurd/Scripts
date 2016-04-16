@@ -4,9 +4,10 @@ Mouse = Me:GetMouse()
 Mode={"BloodLust","Normal"}
 DTable={}
 Combo = 0
-Name="Broken's Katana"
-PrimaryColor = "Really black"
-SecondaryColor="Bright orange"
+Name="Broken's Katana"                    --name your katana--
+PrimaryColor = "Really black"             -- sword color --
+SecondaryColor="Bright orange"            -- blade and magic color--
+ID = 138932314 --hat--
 local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
 plr2 = game.Players.LocalPlayer
@@ -34,20 +35,10 @@ shirt = Instance.new("Shirt", Char)
 shirt.Name = "Shirt"
 pants = Instance.new("Pants", Char)
 pants.Name = "Pants"
-Char.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=359403460"
-Char.Pants.PantsTemplate = "http://www.roblox.com/asset/?id=267376586"
+Char.Shirt.ShirtTemplate = "http://www.roblox.com/asset/?id=359403460"   -- shirt use source if id is 1234 use 1233--
+Char.Pants.PantsTemplate = "http://www.roblox.com/asset/?id=267376586"   -- pants use source if id is 1234 use 1233--
 ----------------------------------------------------
-elseif key == "[" then
 ----------------------------------------------------
-z = Instance.new("Sound", Char)
-z.SoundId = "rbxassetid://165065112 "--165065112
-z.Looped = true
-z.Pitch = 1
-z.Volume = 10
-wait(.01)
-z:Play()
-----------------------------------------------------
-ID = 138932314
 	p = game:GetService("InsertService"):LoadAsset(ID)
 	p.Parent = workspace
 	p:makeJoints()
@@ -63,6 +54,15 @@ ID = 138932314
 	end
 	p.Parent = nil
 ----------------------------------------------------
+elseif key == "[" then
+----------------------------------------------------
+z = Instance.new("Sound", Char)
+z.SoundId = "rbxassetid://165065112 "                                --MUSIC ID GOES HERE--
+z.Looped = true
+z.Pitch = 1
+z.Volume = 10
+wait(.01)
+z:Play()
     end
 end)
 spawn(function()
@@ -239,7 +239,7 @@ else
 parent:Destroy()
 end end
 Lite = Instance.new("PointLight")
-Lite.Color = Color3.new(255,165,0)
+Lite.Color = Color3.new(255,165,0)     -- CHANGE THIS--
 Lite.Range = 10
 Lite.Brightness = 10
 Lite.Parent = Char.Torso
@@ -292,7 +292,7 @@ vel.maxForce = Vector3.new(math.huge,math.huge,math.huge)
 coroutine.resume(coroutine.create(function()
 while Dashing == true do wait()
 vel.velocity = Char.Head.CFrame.lookVector * 70
-Effect(Char.Torso, 1,0.5,1, 0,0,1, 0,0,0,BrickColor.new("Bright orange"),true, 20329976,Char.Torso.CFrame*CFrame.new(0,-2.75,0).p)
+Effect(Char.Torso, 1,0.5,1, 0,0,1, 0,0,0,BrickColor.new(SecondaryColor),true, 20329976,Char.Torso.CFrame*CFrame.new(0,-2.75,0).p)
 end
 end))
 wait(1)
@@ -530,7 +530,7 @@ coroutine.wrap(function()
 while trailin do wait()
 local point = CFrame.new(lastPoint, part.Position) * CFrame.Angles(-math.pi/2, 0, 0)
 local mag = (lastPoint - part.Position).magnitude
-local p = Create:Part(Char,1,1,1,BrickColor.new("Bright orange"),0.1,false,true)
+local p = Create:Part(Char,1,1,1,BrickColor.new(SecondaryColor),0.1,false,true)
 if color then p.BrickColor = BrickColor.new(color) end
 Instance.new("SpecialMesh",p).Scale=Vector3.new(0.125, mag, 0.125)
 p.CFrame = point * CFrame.new(0, mag/1.95, 0)
@@ -725,9 +725,9 @@ if not Sheathed then
 wait(math.random(-1,2))
 lightswitch = math.random(1,2)
 if lightswitch == 1 then
-Lightning(HandleBase.CFrame*CFrame.new(0,1,0).p,Tip.CFrame.p,math.random(3,6),math.random(-0.75,0.75),"Bright orange",0.04,0.2)
+Lightning(HandleBase.CFrame*CFrame.new(0,1,0).p,Tip.CFrame.p,math.random(3,6),math.random(-0.75,0.75),SecondaryColor,0.04,0.2)
 elseif lightswitch == 2 then
-Lightning(HandleBase.CFrame*CFrame.new(0,1,0).p,Tip.CFrame.p,math.random(3,6),math.random(-0.75,0.75),"Bright orange",0.04,0.2)
+Lightning(HandleBase.CFrame*CFrame.new(0,1,0).p,Tip.CFrame.p,math.random(3,6),math.random(-0.75,0.75),SecondaryColor,0.04,0.2)
 end
 end
 end
