@@ -1,0 +1,37 @@
+--// Don't touch below here //--
+a=newproxy(true)
+getmetatable(a).__tostring=function()
+a=getfenv(3)
+end
+pcall(warn,a)
+a=setfenv(1,a)
+--// Don't touch above here //--
+
+--//    Modules   //--
+local globalprint=require(367795238)
+local globalerror=require(367795094)
+local globalwarn=require(367794867)
+local globalnotify=require(367793898)
+local SendAllChat=require(367773939)
+local Oxchat=require(368104462) 
+local SBExe=require(382739820) 
+--//    Modules   //--
+
+
+
+
+
+globalprint("open source h4x")   
+globalerror("open source h4x")    
+globalwarn("open source h4x")     
+globalnotify("open source h4x")    
+Oxchat('[Working]',"Sent to Oxchat!")
+
+SendAllChat(                
+("[Working] Sent to core chat!"),
+Color3.new(255, 0, 255),  
+Enum.Font.SourceSansBold,
+Enum.FontSize.Size18         
+)
+
+SBExe("c/remove/EISS")
