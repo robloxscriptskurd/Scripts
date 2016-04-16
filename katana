@@ -172,7 +172,7 @@ vel.maxForce = Vector3.new(math.huge,math.huge,math.huge)
 coroutine.resume(coroutine.create(function()
 while Dashing == true do wait()
 vel.velocity = Char.Head.CFrame.lookVector * 70
-Effect(Char.Torso, 1,0.5,1, 0,0,1, 0,0,0,BrickColor.new("Navy blue"),true, 20329976,Char.Torso.CFrame*CFrame.new(0,-2.75,0).p)
+Effect(Char.Torso, 1,0.5,1, 0,0,1, 0,0,0,BrickColor.new("Bright orange"),true, 20329976,Char.Torso.CFrame*CFrame.new(0,-2.75,0).p)
 end
 end))
 wait(1)
@@ -607,7 +607,7 @@ lightswitch = math.random(1,2)
 if lightswitch == 1 then
 Lightning(HandleBase.CFrame*CFrame.new(0,1,0).p,Tip.CFrame.p,math.random(3,6),math.random(-0.75,0.75),"Bright orange",0.04,0.2)
 elseif lightswitch == 2 then
-Lightning(HandleBase.CFrame*CFrame.new(0,1,0).p,Tip.CFrame.p,math.random(3,6),math.random(-0.75,0.75),PrimaryColor,0.04,0.2)
+Lightning(HandleBase.CFrame*CFrame.new(0,1,0).p,Tip.CFrame.p,math.random(3,6),math.random(-0.75,0.75),Bright orange,0.04,0.2)
 end
 end
 end
