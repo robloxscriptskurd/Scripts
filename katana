@@ -6,7 +6,7 @@ DTable={}
 Combo = 0
 Name="Broken's Katana"
 PrimaryColor = "Really black"
-SecondaryColor="Bright orange"
+SecondaryColor="random"
 pcall(function() Char:FindFirstChild("WepModel"):Destroy() Me.Backpack:FindFirstChild(Name):Destroy() end)
 Activated = false
 Sheathed = true
