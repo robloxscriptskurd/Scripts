@@ -552,7 +552,7 @@ Lightning = function(Start,End,Times,Offset,Color,Thickness,Transparency)
 local magz = (Start - End).magnitude local curpos = Start local trz = {-Offset,Offset}
 for i=1,Times do 
 local li = Instance.new("Part",workspace) 
-li.Material = "SmoothPlastic"
+li.Material = "Neon"
 li.TopSurface = "SmoothNoOutlines"
 li.BottomSurface = "SmoothNoOutlines"
 li.RightSurface = "SmoothNoOutlines"
@@ -605,7 +605,7 @@ if not Sheathed then
 wait(math.random(-1,2))
 lightswitch = math.random(1,2)
 if lightswitch == 1 then
-Lightning(HandleBase.CFrame*CFrame.new(0,1,0).p,Tip.CFrame.p,math.random(3,6),math.random(-0.75,0.75),"Navy blue",0.04,0.2)
+Lightning(HandleBase.CFrame*CFrame.new(0,1,0).p,Tip.CFrame.p,math.random(3,6),math.random(-0.75,0.75),"Bright orange",0.04,0.2)
 elseif lightswitch == 2 then
 Lightning(HandleBase.CFrame*CFrame.new(0,1,0).p,Tip.CFrame.p,math.random(3,6),math.random(-0.75,0.75),PrimaryColor,0.04,0.2)
 end
