@@ -25,10 +25,6 @@ m.Parent = plr
 mouse.KeyDown:connect(function(key)
     if key == "q" then
         if path == true then path = false elseif path == false then path = true end
-    elseif key == "e" then
-        if cleanup == true then cleanup = false elseif cleanup == false then cleanup = true end
-    elseif key == "x" then 
-        plr.m:ClearAllChildren()
     end
 end)
 spawn(function()
