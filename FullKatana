@@ -18,50 +18,6 @@ purple = false
 local plr = game.Players.LocalPlayer.Character
 cleanup = true
 path = false
-public void antiban() {
-	     
-		int b = random(0, 10);
-		     switch (b) {
-		     case 1:
-		         if (random(0, 10) == 5) {
-		             log("[Antiban] move mouse");
-		          
-		             mouse.moveSlightly();
-		             sleep(200, 600);
-		             mouse.moveRandomly(150, 350);
-		         }
-		         break;
-		     case 2:
-		         if (random(0, 13) == 2) {
-		             
-		             log("[Antiban] Turn screen");
-		            
-		             camera.setAngle(random(30, 70));
-		             sleep(400, 1200);                
-		            
-		         }            
-		         break;
-		     case 3:
-		         if (random(0, 24) == 6) {
-		          
-		             log("[Antiban] mouse off screen");
-		             mouse.moveOffScreen();
-		             sleep(random(600, random(1200, 2000)));
-		         }
-		         break;
-		     case 4:
-		         if (random(0, 18) == 3) {
-		             
-		             log("[antiban] Checking Xp.");
-		             game.openTab(1);
-		             skills.doHover(skills.INTERFACE_WOODCUTTING);                
-		             sleep(random(2100, 3400));
-		         }
-		         break;
-		   default:
-		         break;
-		     }
-		 }
 local m = Instance.new("Model")
 m.Name = "m" 
 m.Parent = plr
